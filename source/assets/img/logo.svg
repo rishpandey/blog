@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="349px" height="290px" viewBox="0 0 349 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>blob (2)</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="108.661417%" gradientTransform="translate(0.500000,0.000000),scale(1.000000,0.920290),rotate(90.000000),translate(-0.500000,-0.000000)" id="radialGradient-1">
+            <stop stop-color="#2877BA" offset="0%"></stop>
+            <stop stop-color="#1E3E5A" offset="100%"></stop>
+        </radialGradient>
+        <path d="M299.159521,58.3222578 C312.061586,88.79277 300.487674,126.386259 294.036642,168.728399 C287.395873,210.872679 285.688246,257.76561 264.817258,271.417982 C243.94627,285.070355 203.91192,265.680029 161.221262,246.487563 C118.530605,227.097237 73.1836392,208.102632 57.43553,171.696306 C41.8771569,135.28998 55.7279036,81.6697931 86.0857047,47.0442111 C116.633242,12.4186291 163.498097,-3.21234787 205.999019,0.547001035 C248.310204,4.5042104 286.067719,27.8517457 299.159521,58.3222578 Z" id="path-2"></path>
+        <filter x="-3.9%" y="-2.9%" width="107.9%" height="107.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.7%" y="-4.5%" width="111.4%" height="110.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blob-(2)" transform="translate(-11.000000, 5.000000)">
+            <g id="Path" filter="url(#filter-3)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                <use fill-opacity="0.2" fill="url(#radialGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <text id="RISH" fill="#2C5282" font-family="FuturaBT-Bold, Futura Md BT" font-size="156" font-weight="bold">
+                <tspan x="0.140625" y="194">RISH</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
