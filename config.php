@@ -64,6 +64,4 @@ return [
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
-
-    'slack_webhook_url' => 'https://hooks.slack.com/services/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'
 ];

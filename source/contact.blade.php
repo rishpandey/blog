@@ -11,7 +11,7 @@ description: Get in touch
     {{--    You can find me on twitter.--}}
     {{--</p>--}}
 
-    <form method="post" id="contact-form" class="mb-12">
+    <form action="/message-sent" method="post" id="contact-form" class="mb-12" data-netlify="true">
         <div class="flex flex-wrap mb-6 -mx-3">
             <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
                 <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
@@ -67,47 +67,4 @@ description: Get in touch
             >
         </div>
     </form>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            let formData = new FormData(document.getElementById('contact-form'));
-            let formJSON = [{
-                "type": "section",
-                text: {
-                    "type": "mrkdwn",
-                    "text": '# New Message from rishpandey.com'
-                }
-            }];
-            formData.forEach(function (value, key) {
-                formJSON.push({
-                    "type": "section",
-                    text: {
-                        "type": "mrkdwn",
-                        "text": '*' + key.toUpperCase() + '*' + '\n' + value + '\n\n'
-                    }
-                })
-            });
-
-            let result = {
-                text: 'New Message on RishPandey.com',
-                blocks: formJSON
-            }
-
-
-            fetch('{{ $page->slack_webhook_url  }}', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    // 'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(result)
-            }).then(response => {
-                window.location = '/message-sent'
-            }).catch(resp => {
-                console.log(resp, resp.data)
-            })
-
-        })
-    </script>
 @stop
