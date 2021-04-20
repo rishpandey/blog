@@ -8,7 +8,12 @@ class GenerateIndex
 {
     public function handle(Jigsaw $jigsaw)
     {
-        $data = collect($jigsaw->getCollection('posts')->map(function ($page) use ($jigsaw) {
+        $posts = $jigsaw->getCollection('posts');
+        $tutorials = $jigsaw->getCollection('tutorials');
+
+        $collection = $posts->concat($tutorials);
+
+        $data = collect($collection->map(function ($page) use ($jigsaw) {
             return [
                 'title' => $page->title,
                 'description' => $page->description,
@@ -17,6 +22,7 @@ class GenerateIndex
                 'snippet' => $page->getExcerpt(),
             ];
         })->values());
+
 
         file_put_contents($jigsaw->getDestinationPath() . '/index.json', json_encode($data));
     }
