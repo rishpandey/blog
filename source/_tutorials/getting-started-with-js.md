@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Getting Started with Web Development: Into to Javascript"
+title: "Getting Started with Web Development: Intro to Javascript"
 excerpt: A crash course of js, everything you need to get started with adding whole lot of awesome to your web pages. 
 date: 2021-03-30
 categories: [basics]

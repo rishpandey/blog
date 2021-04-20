@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Getting Started with Web Development: Into to HTML"
+title: "Getting Started with Web Development: Intro to HTML"
 excerpt: A crash course of everyone's favorite web markup language. 
 date: 2021-03-20
 categories: [basics]

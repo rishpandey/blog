@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Getting Started with Web Development: Into to Web and Internet"
+title: "Getting Started with Web Development: Intro to Web and Internet"
 excerpt: Q/A about how the internet works. 
 date: 2021-03-15
 categories: [basics]

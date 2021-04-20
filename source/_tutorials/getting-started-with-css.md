@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Getting Started with Web Development: Into to CSS"
+title: "Getting Started with Web Development: Intro to CSS"
 excerpt: A crash course of CSS, the source of every beautiful thing you see on the web. 
 date: 2021-03-25
 categories: [basics]
