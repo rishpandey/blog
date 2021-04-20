@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl' => 'http://blog.test/',
+    'baseUrl' => 'http://localhost:3000',
     'production' => false,
     'siteName' => 'Rishabh Pandey',
     'siteDescription' => 'Blog',
@@ -14,14 +14,23 @@ return [
         'posts' => [
             'author' => 'Rishabh Pandey', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'blog/{filename}',
-            'path' => 'blog/{filename}',
+            'path' => 'articles/{filename}',
             'filter' => function ($post) {
-                return $post->published ?? true;
+                return ($post->published ?? true);
             }
         ],
+
+        'tutorials' => [
+            'author' => 'Rishabh Pandey', // Default author, if not provided in a post
+            'sort' => '-date',
+            'path' => 'articles/{filename}',
+            'filter' => function ($post) {
+                return ($post->published ?? true);
+            }
+        ],
+
         'categories' => [
-            'path' => '/blog/categories/{filename}',
+            'path' => '/articles/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;
@@ -64,4 +73,10 @@ return [
     'isActive' => function ($page, $path) {
         return Str::endsWith(trimPath($page->getPath()), trimPath($path));
     },
+
+    'getReadTime' => function ($page, $wpm = 150) {
+        $content = strip_tags($page->getContent());
+        $word_count = str_word_count($content);
+        return ceil($word_count / $wpm);
+    }
 ];

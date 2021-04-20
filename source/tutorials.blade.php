@@ -2,13 +2,13 @@
 title: Blog
 description: The list of blog posts for the site
 pagination:
-    collection: posts
-    perPage: 4
+    collection: tutorials
+    perPage: 10
 ---
 @extends('_layouts.master')
 
 @section('body')
-    <h1>Blog</h1>
+    <h1>Tutorials</h1>
 
     <hr class="border-b my-6">
 

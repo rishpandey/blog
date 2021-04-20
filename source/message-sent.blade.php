@@ -12,7 +12,6 @@ I have received your message. Let me get back to you shortly.
 </p>
 
 <a href="/" title="Home" class="tracking-wide mb-4">
-    Let's go home for now.
-
+    Let's go home for now →
 </a>
 @stop

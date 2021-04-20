@@ -22,7 +22,7 @@
 
             <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}"
                class="uppercase tracking-wide mb-4">
-                Read
+                {{ $featuredPost->getReadTime() }}  Minutes Read  ➡
             </a>
         </div>
 

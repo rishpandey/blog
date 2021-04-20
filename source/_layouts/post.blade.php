@@ -9,22 +9,25 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="leading-none mb-1">{{ $page->title }}</h1>
-
-    <p class="text-xl md:mt-0 md:mb-4">{{ $page->description }}</p>
-
+    <h1 class="leading-none mb-4">{{ $page->title }}</h1>
+    <p class="mb-2"><strong>Approx Time:</strong> {{ $page->getReadTime() }}  Minutes</p>
+{{--    <p class="text-xl md:mt-0 md:mb-4">{{ $page->description }}</p>--}}
     <p class="text-gray-700 text-lg md:mt-0">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
 
-    @if ($page->categories)
-        @foreach ($page->categories as $i => $category)
-            <a
-                    href="{{ '/blog/categories/' . $category }}"
-                    title="View posts in {{ $category }}"
-                    class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >{{ $category }}</a>
-        @endforeach
-    @endif
+    <div>
+        @if ($page->categories)
+            @foreach ($page->categories as $i => $category)
+                <a
+                        href="{{ '/articles/categories/' . $category }}"
+                        title="View posts in {{ $category }}"
+                        class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px "
+                >{{ $category }}</a>
+            @endforeach
+        @endif
+    </div>
 
+
+    <div class="border-b border-blue-200 my-8" v-pre></div>
     <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
         @yield('content')
     </div>
