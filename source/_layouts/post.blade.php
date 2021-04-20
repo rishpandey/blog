@@ -29,9 +29,10 @@
         @yield('content')
     </div>
 
-    <div class="-mt-8 mb-8">
+    <div class="-mt-8 mb-4">
         @include('_components.social-share')
     </div>
+
 
 
     <nav class="flex justify-between text-sm md:text-base">
