@@ -165,7 +165,7 @@ The above selector will also work if the nested element is deeper in the structu
 	These are used to select an element by its attribute. For example, a		paragraph with id message can be selected by **p[id=“message”]**.
 
 	* pseudo class selectors 
-	Pseudo classes are predefined keywords that are used to select an 		element based on its **state**, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		**button:disabled**. 
+	Pseudo classes are predefined keywords that are used to select an 		element based on its state, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		button:disabled. 
 
 	* pseudo element selectors
 	Pseudo elements are used to style a part of an element, there are five 		supported pseudo elements,

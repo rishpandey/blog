@@ -7,11 +7,11 @@ date: 2021-03-20
 categories: [basics]
 ---
 
-HTML stands for Hyper Text Markup Language. **HTML** is the standard markup language for creating web pages and web applications. Every page you see on the web has some sort of HTML associated with it. Even the most minimal browser in the worlds needs to understand or parse HTML/CSS and Javascript to be able to show webpages.
+HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating web pages and web applications. Every page you see on the web has some sort of HTML associated with it. Even the most minimal browser in the worlds needs to understand or parse HTML/CSS and Javascript to be able to show webpages.
 
 By convention, an HTML file is saved with a .html or .htm extension.
 
-Inside this file, we organise the content using **tags**. Tags wrap the content, and each tag gives a special meaning to the text it wraps. 
+Inside this file, we organise the content using tags. Tags wrap the content, and each tag gives a special meaning to the text it wraps. 
 
 
 
@@ -41,7 +41,7 @@ An element constitutes the whole *package*:
 If an element has doesn’t have a closing tag, it is only written with the starting tag, and it cannot contain any text content. Opening and closing tags are there to contain relevant information.
 
 **Attributes**
-The starting tag of an element can have special snippets of information we can attach, called **attributes**.
+The starting tag of an element can have special snippets of information we can attach, called attributes.
 
 Attributes have the key=“value” syntax:
 
@@ -129,9 +129,10 @@ There are many other text tags like em, quotes, pre etc. They are less used but 
 **Lists**
 
 There are three types of lists in HTML.
-* unordered lists - <ul> 
-* ordered lists - <ol>
-* definition lists - <dl> 
+
+* unordered lists 
+* ordered lists
+* definition lists 
 
 Unordered and ordered lists are widely used, definition lists are not. 
 

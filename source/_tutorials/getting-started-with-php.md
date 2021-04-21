@@ -184,14 +184,14 @@ These are used to assign values to variables. In PHP, we have
 
 - Comparison Operator
 These are mostly seen inside an if-else block or a loop. These operators are used to construct a condition by comparing two variables or values. PHP supports following comparison operators,
-	- == Is **equal**to
-	- != Is **not equal**to
-	- > Is **greater than**
-	- < Is **less than**
-	- >= Is **greater than or equal**to 
-	- <= Is **less than or equal**to 
+	- == Is equal to
+	- != Is not equal to
+	- > Is greater than
+	- < Is less than
+	- >= Is greater than or equal to 
+	- <= Is less than or equal to 
 
-PHP is a loosely types language. For example, you can create a multiple-digit number and extract the *n*th digit from it, simply by assuming it to be a string. 
+PHP is a loosely types language. For example, you can create a multiple-digit number and extract the nth digit from it, simply by assuming it to be a string. 
 
 ```
 
