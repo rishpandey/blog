@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Why Directly Mutating Props in Vue Is a Mistake (And What Really Happens Under the Hood)"
-date: 2024-01-16
+date: 2024-07-01
 featured: false
 categories: [vue]
 ---
