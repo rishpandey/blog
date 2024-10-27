@@ -3,8 +3,8 @@ extends: _layouts.post
 section: content
 title: "The Critical Role of key in Vue’s Virtual DOM Diffing"
 cover_image: https://images.unsplash.com/photo-1550527882-b71dea5f8089?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-date: 2024-07-01
-featured: false
+date: 2024-07-10
+featured: true
 categories: [vue]
 ---
 Directly modifying props in a Vue component might seem like a quick solution, but it goes against Vue's fundamental design principles and leads to unintended consequences. Let’s dive into the mechanics of Vue’s reactivity and unidirectional data flow to see why mutating props is problematic and what it actually does to your component’s behavior.
