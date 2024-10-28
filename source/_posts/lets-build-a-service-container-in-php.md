@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Let's build a service container"
+title: "Let's build a service container in PHP"
 cover_image: https://images.unsplash.com/photo-1554769944-3138b076c38a?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 date: 2024-08-1
 featured: true
@@ -11,23 +11,6 @@ categories: [laravel, php]
 In the world of modern PHP development, Service Containers (also known as Dependency Injection Containers) are really popular for managing class dependencies and promoting modular, testable code. Frameworks like Laravel and Symfony provide robust service containers out of the box. But most of the time developers have a hard time really understanding service containers.
 
 Today we are building a simple yet functional service container from scratch in PHP. Hopefully by the end of this article you have a clear understanding of how it works and what it offers.
-
-### Table of Contents
-
-1. [What is a Service Container?](#what-is-a-service-container)
-2. [Why Use a Service Container?](#why-use-a-service-container)
-3. [Setting Up the Project](#setting-up-the-project)
-4. [Designing the Container Interface](#designing-the-container-interface)
-5. [Implementing the Service Container](#implementing-the-service-container)
-6. [Registering Services](#registering-services)
-7. [Resolving Dependencies](#resolving-dependencies)
-8. [Handling Constructor Injection](#handling-constructor-injection)
-9. [Relating to Laravel's Container](#relating-to-laravels-container)
-10. [Adding Extra Features from Laravel](#adding-extra-features-from-laravel)
-11. [Testing Our Container](#testing-our-container)
-12. [Conclusion](#conclusion)
-
----
 
 ## What is a Service Container?
 
