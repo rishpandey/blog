@@ -2,8 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Let's build a Vite clone and use it to bundle own project"
-cover_image: https://images.unsplash.com/photo-1554769944-3138b076c38a?q=80&w=3840&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-date: 2024-08-1
+date: 2024-09-01
 featured: true
 categories: [vue, js]
 ---
