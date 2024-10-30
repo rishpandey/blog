@@ -11,7 +11,7 @@ A while ago, I wanted to really understand how modern UI libraries like Vue mana
 
 ## Creating the Virtual DOM Library
 
-#### Step 1: Setting Up the Project
+### Step 1: Setting Up the Project
 
 First, I created a new directory for my library:
 
@@ -23,11 +23,11 @@ npm init -y
 
 This initializes a new npm package with default settings.
 
-#### Step 2: Implementing the Virtual DOM
+### Step 2: Implementing the Virtual DOM
 
 I wanted the library to be minimal yet functional. Here's how I structured it.
 
-**1. Defining Virtual Nodes (VNodes)**
+#### **1. Defining Virtual Nodes (VNodes)**
 
 Why do we need to define Virtual Nodes (VNodes)?
 
@@ -47,7 +47,7 @@ module.exports = { h };
 ```
 
 
-**2. Rendering VNodes to the Real DOM**
+#### **2. Rendering VNodes to the Real DOM**
 
 After setting up our VNodes, the next challenge was figuring out how to turn these virtual nodes into actual DOM elements that the browser can display. Since VNodes are just JavaScript objects representing the structure of my UI, we need a way to translate them into real DOM nodes.
 
@@ -80,7 +80,7 @@ function render(vNode) {
 module.exports = { render };
 ```
 
-**3. Implementing the Diffing Algorithm**
+#### **3. Implementing the Diffing Algorithm**
 
 After getting the VNodes rendering on the page, the next big challenge is efficiently updating the DOM when the application state changes. I didn't want to re-render the entire UI every time something changed—that would be inefficient and could cause performance issues.
 
@@ -193,7 +193,8 @@ module.exports = { diff };
 
 There are 4 parts the diff process.
 
-**1. The `diff` function**
+##### 1. The `diff` function
+
 I started by writing a `diff` function that takes two VNodes—the old one and the new one—and returns a function (which I call a "patch") that can update the real DOM accordingly. Let me break down what this function does:
 
    - **Node Removal**: If `newVNode` is `undefined`, it means the node has been removed in the new tree. So, we return a patch function that removes the corresponding real DOM node.
@@ -208,7 +209,7 @@ I started by writing a `diff` function that takes two VNodes—the old one and t
 
       - **Diff the children**: Recursively apply the diffing process to child nodes.
 
-**2. Diffing Props**
+##### 2. Diffing Props
 
    - **Setting New and Updated Props**: We iterate over `newProps` and create patches that set these attributes on the real DOM node.
 
@@ -216,7 +217,7 @@ I started by writing a `diff` function that takes two VNodes—the old one and t
 
    - **Applying the Patches**: We return a function that, when called with a DOM node, applies all these patches.
 
-**3. Diffing Children**
+##### 3. Diffing Children
 
 Children are a bit trickier since they are arrays of VNodes. We need to:
 
@@ -226,14 +227,14 @@ Children are a bit trickier since they are arrays of VNodes. We need to:
 
    - **Apply Child Patches**: The returned function applies all the child patches to the parent DOM node.
 
-**4. Applying the Patches**
+##### 4. Applying the Patches
 
    - Finally, we need a way to apply these patches to update the DOM. This is where the `patch()` method comes in.
 
    - When the application state changes, we can now generate a new VNode, diff it with the old one, and apply the resulting patches.
 
 
-**4. Putting It All Together**
+#### **4. Putting It All Together**
 
 Finally, we export all the functions:
 
@@ -247,7 +248,7 @@ module.exports = { h, render, diff };
 ```
 
 
-#### Step 3: Preparing for Packaging
+### Step 3: Preparing for Packaging
 
 I updated the `package.json` to include the main entry point:
 
@@ -261,7 +262,7 @@ I updated the `package.json` to include the main entry point:
 ```
 
 
-#### Step 4: Publishing Locally
+### Step 4: Publishing Locally
 
 For testing purposes, I used `npm link` to make this package available globally:
 
