@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: "Let's build a Vite clone and use it to bundle own project"
+title: "Let's make a Vite clone and use it to build our own project"
 date: 2024-09-01
 featured: true
 categories: [vue, js]
