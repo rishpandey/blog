@@ -11,7 +11,7 @@ A while ago, I wanted to really understand how modern UI libraries like Vue mana
 
 ## Creating the Virtual DOM Library
 
-### Step 1: Setting Up the Project
+#### Step 1: Setting Up the Project
 
 First, I created a new directory for my library:
 
@@ -23,11 +23,11 @@ npm init -y
 
 This initializes a new npm package with default settings.
 
-### Step 2: Implementing the Virtual DOM
+#### Step 2: Implementing the Virtual DOM
 
 I wanted the library to be minimal yet functional. Here's how I structured it.
 
-#### **1. Defining Virtual Nodes (VNodes)**
+**1. Defining Virtual Nodes (VNodes)**
 
 Why do we need to define Virtual Nodes (VNodes)?
 
@@ -47,7 +47,7 @@ module.exports = { h };
 ```
 
 
-#### **2. Rendering VNodes to the Real DOM**
+**2. Rendering VNodes to the Real DOM**
 
 After setting up our VNodes, the next challenge was figuring out how to turn these virtual nodes into actual DOM elements that the browser can display. Since VNodes are just JavaScript objects representing the structure of my UI, we need a way to translate them into real DOM nodes.
 
@@ -80,25 +80,11 @@ function render(vNode) {
 module.exports = { render };
 ```
 
-#### **3. Implementing the Diffing Algorithm**
+**3. Implementing the Diffing Algorithm**
 
 After getting the VNodes rendering on the page, the next big challenge is efficiently updating the DOM when the application state changes. I didn't want to re-render the entire UI every time something changed—that would be inefficient and could cause performance issues.
 
-This is where the diffing algorithm comes into play. The idea is to compare the new Virtual DOM tree with the previous one, figure out what has changed, and update only those parts in the real DOM.
-
-#### Implementing the Diffing Algorithm
-
-After getting the VNodes rendering on the page, I faced the next big challenge: **efficiently updating the DOM when the application state changes**. I didn't want to re-render the entire UI every time something changed—that would be inefficient and could cause performance issues.
-
-This is where the **diffing algorithm** comes into play. The idea is to compare the new Virtual DOM tree with the previous one, figure out what has changed, and update only those parts in the real DOM.
-
-So, I rolled up my sleeves and started working on a `diff.js` file.
-
-##### Why do we need a diffing algorithm?
-
-When the state of our application changes (like when a user adds a new todo item), we generate a new Virtual DOM tree representing the updated UI. However, we need a way to efficiently update the actual DOM to reflect these changes without re-rendering everything.
-
-The diffing algorithm helps us:
+This is where the diffing algorithm comes into play. The idea is to compare the new Virtual DOM tree with the previous one, figure out what has changed, and update only those parts in the real DOM. The diffing algorithm helps us:
 
 - **Identify changes** between the old and new Virtual DOM trees.
 
@@ -205,49 +191,47 @@ function diffChildren(oldVChildren, newVChildren) {
 module.exports = { diff };
 ```
 
-1. **How I implemented the `diff` function**
+- **The `diff` function**
+I started by writing a `diff` function that takes two VNodes—the old one and the new one—and returns a function (which I call a "patch") that can update the real DOM accordingly. Let me break down what this function does:
 
-   - I started by writing a `diff` function that takes two VNodes—the old one and the new one—and returns a function (which I call a "patch") that can update the real DOM accordingly. Let me break down what this function does:
+   - **Node Removal**: If `newVNode` is `undefined`, it means the node has been removed in the new tree. So, we return a patch function that removes the corresponding real DOM node.
 
-     1. **Node Removal**: If `newVNode` is `undefined`, it means the node has been removed in the new tree. So, we return a patch function that removes the corresponding real DOM node.
+   - **Text Nodes**: If either `oldVNode` or `newVNode` is a string (text node), and they are different, we replace the old text node with the new one.
 
-     2. **Text Nodes**: If either `oldVNode` or `newVNode` is a string (text node), and they are different, we replace the old text node with the new one.
+   - **Different Node Types**: If the `type` of the old and new VNodes are different (e.g., `div` vs. `span`), we can't reconcile them, so we replace the whole node.
 
-     3. **Different Node Types**: If the `type` of the old and new VNodes are different (e.g., `div` vs. `span`), we can't reconcile them, so we replace the whole node.
+   - **Same Node Types**: If the nodes are of the same type, we need to:
 
-     4. **Same Node Types**: If the nodes are of the same type, we need to:
+      - **Diff the props**: Compare the attributes and event listeners.
 
-        - **Diff the props**: Compare the attributes and event listeners.
-        - **Diff the children**: Recursively apply the diffing process to child nodes.
+      - **Diff the children**: Recursively apply the diffing process to child nodes.
 
-2. **Diffing Props**
+- **Diffing Props**
 
-   - To diff the props correctly, we need to do a few things:
+   - **Setting New and Updated Props**: We iterate over `newProps` and create patches that set these attributes on the real DOM node.
 
-     - **Setting New and Updated Props**: We iterate over `newProps` and create patches that set these attributes on the real DOM node.
+   - **Removing Old Props**: We check for any props that were present in `oldProps` but are missing in `newProps` and create patches to remove them.
 
-     - **Removing Old Props**: We check for any props that were present in `oldProps` but are missing in `newProps` and create patches to remove them.
+   - **Applying the Patches**: We return a function that, when called with a DOM node, applies all these patches.
 
-     - **Applying the Patches**: We return a function that, when called with a DOM node, applies all these patches.
+- **Diffing Children**
 
-3. **Diffing Children**
+Children are a bit trickier since they are arrays of VNodes. We need to:
 
-   - Children are a bit trickier since they are arrays of VNodes. We need to:
+   - **Create Child Patches**: Go through each pair of old and new children and generate patches using the `diff` function recursively.
 
-     - **Create Child Patches**: Go through each pair of old and new children and generate patches using the `diff` function recursively.
+   - **Handle Additional Children**: If there are more new children than old ones, create patches to add these new children to the DOM.
 
-     - **Handle Additional Children**: If there are more new children than old ones, create patches to add these new children to the DOM.
+   - **Apply Child Patches**: The returned function applies all the child patches to the parent DOM node.
 
-     - **Apply Child Patches**: The returned function applies all the child patches to the parent DOM node.
-
-4. **Applying the Patches**
+- **Applying the Patches**
 
    - Finally, we need a way to apply these patches to update the DOM. This is where the `patch()` method comes in.
 
    - When the application state changes, we can now generate a new VNode, diff it with the old one, and apply the resulting patches.
 
 
-#### **4. Putting It All Together**
+**4. Putting It All Together**
 
 Finally, we export all the functions:
 
@@ -261,7 +245,7 @@ module.exports = { h, render, diff };
 ```
 
 
-### Step 3: Preparing for Packaging
+#### Step 3: Preparing for Packaging
 
 I updated the `package.json` to include the main entry point:
 
@@ -275,7 +259,7 @@ I updated the `package.json` to include the main entry point:
 ```
 
 
-### Step 4: Publishing Locally
+#### Step 4: Publishing Locally
 
 For testing purposes, I used `npm link` to make this package available globally:
 
@@ -289,7 +273,7 @@ npm link
 
 Now, let's create a new project and use our `mini-vdom` library to render a Todo List.
 
-### Step 1: Setting Up the Todo List Project
+#### Step 1: Setting Up the Todo List Project
 
 ```bash
 mkdir todo-app
@@ -297,7 +281,7 @@ cd todo-app
 npm init -y
 ```
 
-### Step 2: Installing the `mini-vdom` Package
+#### Step 2: Installing the `mini-vdom` Package
 
 Since we used `npm link`, we can link it in our project:
 
@@ -311,9 +295,9 @@ Alternatively, if you publish it to npm, you can install it via:
 npm install mini-vdom
 ```
 
-### Step 3: Creating the Application Files
+#### Step 3: Creating the Application Files
 
-#### **1. HTML File**
+**1. HTML File**
 
 Create an `index.html` file:
 
@@ -331,7 +315,7 @@ Create an `index.html` file:
 </html>
 ```
 
-#### **2. JavaScript File**
+**2. JavaScript File**
 
 Create an `app.js` file:
 
@@ -409,7 +393,7 @@ function update() {
 }
 ```
 
-### Step 4: Setting Up a Development Server
+#### Step 4: Setting Up a Development Server
 
 To serve the application, I used a simple static server. You can install one globally:
 
@@ -427,7 +411,7 @@ This will start a server at `http://localhost:5000` (or another port if 5000 is 
 
 ---
 
-## Further Enhancements
+### Further Enhancements
 
 There are several ways to improve this library:
 
