@@ -191,7 +191,9 @@ function diffChildren(oldVChildren, newVChildren) {
 module.exports = { diff };
 ```
 
-- **The `diff` function**
+There are 4 parts the diff process.
+
+**1. The `diff` function**
 I started by writing a `diff` function that takes two VNodes—the old one and the new one—and returns a function (which I call a "patch") that can update the real DOM accordingly. Let me break down what this function does:
 
    - **Node Removal**: If `newVNode` is `undefined`, it means the node has been removed in the new tree. So, we return a patch function that removes the corresponding real DOM node.
@@ -206,7 +208,7 @@ I started by writing a `diff` function that takes two VNodes—the old one and t
 
       - **Diff the children**: Recursively apply the diffing process to child nodes.
 
-- **Diffing Props**
+**2. Diffing Props**
 
    - **Setting New and Updated Props**: We iterate over `newProps` and create patches that set these attributes on the real DOM node.
 
@@ -214,7 +216,7 @@ I started by writing a `diff` function that takes two VNodes—the old one and t
 
    - **Applying the Patches**: We return a function that, when called with a DOM node, applies all these patches.
 
-- **Diffing Children**
+**3. Diffing Children**
 
 Children are a bit trickier since they are arrays of VNodes. We need to:
 
@@ -224,7 +226,7 @@ Children are a bit trickier since they are arrays of VNodes. We need to:
 
    - **Apply Child Patches**: The returned function applies all the child patches to the parent DOM node.
 
-- **Applying the Patches**
+**4. Applying the Patches**
 
    - Finally, we need a way to apply these patches to update the DOM. This is where the `patch()` method comes in.
 
