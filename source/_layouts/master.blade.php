@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
+    <meta name="keywords" content="{{ $page->keywords }}">
 
     <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}" />
     <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
@@ -39,6 +40,7 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+
     <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
         <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
             <div class="flex items-center">

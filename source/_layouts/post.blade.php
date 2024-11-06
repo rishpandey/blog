@@ -10,18 +10,15 @@
     @endif
 
     <h1 class="leading-none mb-4">{{ $page->title }}</h1>
-    <p class="mb-2"><strong>Approx Time:</strong> {{ $page->getReadTime() }}  Minutes</p>
-{{--    <p class="text-xl md:mt-0 md:mb-4">{{ $page->description }}</p>--}}
+    <p class="mb-2"><strong>Approx Time:</strong> {{ $page->getReadTime() }} Minutes</p>
+    {{--    <p class="text-xl md:mt-0 md:mb-4">{{ $page->description }}</p> --}}
     <p class="text-gray-700 text-lg md:mt-0">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
 
     <div>
         @if ($page->categories)
             @foreach ($page->categories as $i => $category)
-                <a
-                        href="{{ '/articles/categories/' . $category }}"
-                        title="View posts in {{ $category }}"
-                        class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px "
-                >{{ $category }}</a>
+                <a href="{{ '/articles/categories/' . $category }}" title="View posts in {{ $category }}"
+                    class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px ">{{ $category }}</a>
             @endforeach
         @endif
     </div>

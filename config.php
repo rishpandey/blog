@@ -7,6 +7,7 @@ return [
     'production' => false,
     'siteName' => 'Rishabh Pandey',
     'siteDescription' => 'Blog',
+    'siteKeywords' => 'Rishabh Pandey, Blog, Laravel, PHP, Javascript, Vue.js',
     'siteAuthor' => 'Rishabh Pandey',
 
     // collections

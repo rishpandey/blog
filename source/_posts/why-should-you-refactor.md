@@ -4,6 +4,7 @@ section: content
 title: Why should you refactor?
 date: 2020-06-08
 description: Pay the technical debt or suffer the consequences.
+keywords: 'refactoring, technical debt, clean code'
 cover_image: https://images.unsplash.com/photo-1528659882437-b89a74bc157f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
 featured: false
 categories: [coding, clean-code]
