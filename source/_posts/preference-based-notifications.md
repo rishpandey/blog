@@ -4,7 +4,6 @@ section: content
 title: How to implement preference based notifications in laravel?
 date: 2021-04-19
 cover_image: https://images.unsplash.com/photo-1592495994946-52ba21a70bdd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2172&q=80
-featured: true
 categories: [laravel]
 keywords: laravel, notifications, preference based notifications, laravel notifications
 ---

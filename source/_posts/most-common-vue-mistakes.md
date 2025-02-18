@@ -4,7 +4,6 @@ section: content
 title: "Common Vue.js Anti-Patterns and Mistakes You Should Avoid"
 date: 2024-01-20
 cover_image: https://i0.wp.com/picjumbo.com/wp-content/uploads/perfectionism-imperfect-free-photo.jpg?w=2210&quality=70
-featured: true
 categories: [vue, clean-code]
 keywords: vue.js, vue mistakes, vue anti-patterns, vue best practices, vue.js tips
 ---
