@@ -35,6 +35,17 @@
 
 
 
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="3594ef33-d3a4-4d4f-a260-7e603cb11196"
+      data-page-id="{{ PAGE_ID }}"
+      data-page-url="{{ PAGE_URL }}"
+      data-page-title="{{ PAGE_TITLE }}"
+    ></div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+
+
     <nav class="flex justify-between text-sm md:text-base">
         <div>
             @if ($next = $page->getNext())
