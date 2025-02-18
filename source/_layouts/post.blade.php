@@ -33,15 +33,14 @@
         @include('_components.social-share')
     </div>
 
+    @php
+        $page->type = 'article';
+        $slug = str_replace(' ', '-', strtolower(preg_replace('/[^A-Za-z0-9\-]/', '', $page->title)));
+    @endphp
 
-
-    <div id="cusdis_thread"
-      data-host="https://cusdis.com"
-      data-app-id="3594ef33-d3a4-4d4f-a260-7e603cb11196"
-      data-page-id="{{ $page->getId() }}"
-      data-page-url="{{ $page->getUrl() }}"
-      data-page-title="{{ $page->title }}"
-    ></div>
+    <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="3594ef33-d3a4-4d4f-a260-7e603cb11196"
+        data-page-id="{{ $slug }}" data-page-url="{{ $page->getUrl() }}" data-page-title="{{ $page->title }}">
+    </div>
     <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
 
