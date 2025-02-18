@@ -6,6 +6,7 @@ date: 2024-07-01
 featured: false
 categories: [vue]
 keywords: vue, vue props, vue reactivity, vue unidirectional data flow
+description: Let’s dive into the mechanics of Vue’s reactivity and unidirectional data flow to see why mutating props is problematic and what it actually does to your component’s behavior.
 ---
 Directly modifying props in a Vue component might seem like a quick solution, but it goes against Vue's fundamental design principles and leads to unintended consequences. Let’s dive into the mechanics of Vue’s reactivity and unidirectional data flow to see why mutating props is problematic and what it actually does to your component’s behavior.
 

@@ -7,6 +7,7 @@ date: 2024-08-1
 featured: true
 categories: [laravel, php]
 keywords: php, laravel, service container, dependency injection, laravel service container
+description: Learn how to build a simple yet functional service container from scratch in PHP. Understand the concepts of dependency injection and service management.
 ---
 
 In the world of modern PHP development, Service Containers (also known as Dependency Injection Containers) are really popular for managing class dependencies and promoting modular, testable code. Frameworks like Laravel and Symfony provide robust service containers out of the box. But most of the time developers have a hard time really understanding service containers.

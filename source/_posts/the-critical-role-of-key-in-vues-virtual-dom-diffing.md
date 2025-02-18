@@ -7,6 +7,7 @@ date: 2024-07-10
 featured: true
 categories: [vue]
 keywords: vue, virtual dom, vue key, vue diffing, vue reactivity
+description: Learn why the `key` attribute is crucial for Vue’s reactivity and how it ensures smooth, predictable updates in your components.
 ---
 Directly modifying props in a Vue component might seem like a quick solution, but it goes against Vue's fundamental design principles and leads to unintended consequences. Let’s dive into the mechanics of Vue’s reactivity and unidirectional data flow to see why mutating props is problematic and what it actually does to your component’s behavior.
 

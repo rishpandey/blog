@@ -6,6 +6,7 @@ date: 2024-01-20
 cover_image: https://i0.wp.com/picjumbo.com/wp-content/uploads/perfectionism-imperfect-free-photo.jpg?w=2210&quality=70
 categories: [vue, clean-code]
 keywords: vue.js, vue mistakes, vue anti-patterns, vue best practices, vue.js tips
+description: In this post, we'll explore some of the most frequent anti-patterns and mistakes that junior developers often make.
 ---
 
 Vue.js is a popular JavaScript framework known for its simplicity and ease of use. However, even with the most intuitive tools, there are common pitfalls that developers can encounter. In this post, we'll explore some of the most frequent anti-patterns and mistakes that junior developers often make.

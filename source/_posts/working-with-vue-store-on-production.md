@@ -6,6 +6,7 @@ date: 2024-01-16
 featured: false
 categories: [vue]
 keywords: vue, vuex, state management, vue3, debugging
+description: Learn how to access the Vuex store instance in a Vue 3 application on production sites for debugging and inspection purposes.
 ---
 
 Copy and paste the code below in the developer console and you will get the instace of Vuex on any website using vuex. And yes it works on production.

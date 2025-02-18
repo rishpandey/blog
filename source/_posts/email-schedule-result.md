@@ -7,6 +7,7 @@ cover_image: https://i.imgur.com/vRbr9AM.png
 featured: false
 categories: [laravel]
 keywords: laravel, scheduled jobs, cron jobs, laravel schedule, laravel schedule output
+description: Learn how to check if your scheduled jobs are running successfully in Laravel by capturing the output of the scheduled tasks.
 ---
 
 Like always you can also log these into files.

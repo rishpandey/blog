@@ -6,6 +6,7 @@ date: 2024-09-15
 featured: true
 categories: [vue, js]
 keywords: virtual dom, vue, js, frontend, dom manipulation
+description: Learn how to build a Virtual DOM library in JavaScript from scratch and use it to create a basic Todo list app. Understand the principles behind efficient rendering in modern UI libraries like Vue.
 ---
 
 A while ago, I wanted to really understand how modern UI libraries like Vue manage efficient rendering. So, I decided to challenge myself by **creating my own Virtual DOM library**. In this article, we will see how to do build our own Virtual DOM and use it to create a basic Todo list app.

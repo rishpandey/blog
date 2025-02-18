@@ -6,6 +6,7 @@ date: 2024-11-10
 featured: true
 keywords: 'postgres, mysql, postgres vs mysql, database, database architecture'
 categories: [database]
+description: A detailed comparison of the architecture of PostgreSQL and MySQL, highlighting their key components, differences, and use cases.
 ---
 
 Both PostgreSQL and MySQL follow a client-server architecture where the database server handles all database operations, and clients interact with the database through queries. While both databases follow similar fundamental structures, they have different internal architectures and implementations for handling requests, transactions, replication, and extensibility. Below is a breakdown of their architectures.

@@ -6,6 +6,7 @@ date: 2024-09-01
 featured: true
 categories: [vue, js]
 keywords: vite, build tool, esbuild, npm, web development, frontend, javascript
+description: Learn how to create a minimal clone of Vite, a modern frontend build tool, package it as an NPM module, and use it to build a project.
 ---
 
 Modern web development requires fast and efficient tooling to enhance developer experience and productivity. **Vite** is a build tool that has gained popularity for its lightning-fast development server and seamless build process. Let's dive deep into how to create a minimal clone of Vite, package it as an NPM module, and install it in a project.

@@ -6,6 +6,7 @@ date: 2024-06-01
 featured: false
 categories: [vue]
 keywords: vue, vue 3, pinia, vuex, state management, composition api, reactivity, typescript
+description: Discover why Pinia is the ideal state management solution for Vue 3, offering improved reactivity, TypeScript support, and a modular design compared to Vuex.
 ---
 In the Vue ecosystem, state management has always been essential, and Vuex was long the go-to solution. But with Vue 3, a new option entered the game: **Pinia**. Built to take advantage of Vue 3's Composition API and modern JavaScript capabilities, Pinia streamlines state management, reduces boilerplate, and enhances flexibility. Here’s why Pinia is better than Vuex, what’s changed, and how Pinia handles state differently under the hood.
 
