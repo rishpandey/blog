@@ -38,9 +38,9 @@
     <div id="cusdis_thread"
       data-host="https://cusdis.com"
       data-app-id="3594ef33-d3a4-4d4f-a260-7e603cb11196"
-      data-page-id="{{ PAGE_ID }}"
-      data-page-url="{{ PAGE_URL }}"
-      data-page-title="{{ PAGE_TITLE }}"
+      data-page-id="{{ $page->getId() }}"
+      data-page-url="{{ $page->getUrl() }}"
+      data-page-title="{{ $page->title }}"
     ></div>
     <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
