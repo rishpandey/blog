@@ -2,9 +2,10 @@
 extends: _layouts.post
 section: content
 title: "PostgreSQL vs MySQL: A Comprehensive Comparison"
-date: 2024-09-10
-featured: false
+date: 2024-10-15
+featured: true
 categories: [database]
+keywords: postgresql, mysql, postgres vs mysql, database, relational database, rdbms
 ---
 
 When it comes to choosing a relational database management system (RDBMS) for your applications, two of the most popular options are PostgreSQL and MySQL. Both are open-source, widely used, and have unique strengths that make them suitable for different types of projects. In this blog post, we’ll dive deep into the differences between PostgreSQL and MySQL to help you decide which one might be the best fit for your needs.

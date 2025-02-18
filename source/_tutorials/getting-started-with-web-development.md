@@ -2,9 +2,10 @@
 extends: _layouts.post
 section: content
 title: "Getting Started with Web Development"
-excerpt: The compilation of all lessons in the web development bootcamp.  
+excerpt: The compilation of all lessons in the web development bootcamp.
 date: 2021-04-15
 categories: [basics]
+keywords: web development, internet, html, css, javascript, web applications, web pages
 ---
 
 # Intro to the Web and the Internet
@@ -21,10 +22,10 @@ Data sent across the Internet is called a *message*. Before a *message* is sent,
 **What’s a packet routing network?**<br>
 It is a network that routes *packets* from a source computer to a destination computer. The Internet is made up of a massive network of specialized computers called *routers*. Each *router’s* job is to know how to move *packets* along from their source to their destination. A *packet* will have moved through multiple *routers* during its journey.
 
-When a *packet* moves from one *router* to the next, it’s called a *hop*. 
+When a *packet* moves from one *router* to the next, it’s called a *hop*.
 You can use the command line-tool traceroute to see the list of hops packets take between you and a host.
 
-> traceroute -I 8.8.8.8  
+> traceroute -I 8.8.8.8
 
 The *Internet Protocol* specifies how network *addresses*should be attached to the *packet’s* *headers,*a designated space in the *packet* containing its meta-data. The *Internet Protocol* also specifies how the *routers* should forward the *packets* based on the *address* in the *header*.
 
@@ -47,13 +48,13 @@ The first address standard is called *IPv4* and it looks like 212.78.1.25 . But 
 As such, there is a one-to-one mapping between *IPv4* and *IPv6* addresses. Note the switch from *IPv4* to *IPv6* is still in progress and will take a long time. As of 2014, Google revealed their *IPv6* traffic was only at 3%.
 
 **How can there be over 8 billion networked devices on the Internet if there are only about 4 billion IPv4 addresses?**<br>
-It’s because there are *public* and *private IP addresses.* Multiple devices on a local network connected to the Internet will share the same *public IP address*. Within the local network, these devices are differentiated from each other by *private IP addresses*, typically of the form 192.168.xx or 172.16.x.x or 10.x.x.x where x is a number between 1 and 255. These *private IP addresses* are assigned by * .* [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) 
+It’s because there are *public* and *private IP addresses.* Multiple devices on a local network connected to the Internet will share the same *public IP address*. Within the local network, these devices are differentiated from each other by *private IP addresses*, typically of the form 192.168.xx or 172.16.x.x or 10.x.x.x where x is a number between 1 and 255. These *private IP addresses* are assigned by * .* [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
 For example, if a laptop and a smart phone on the same local network both make a request to www.google.com, before the *packets* leave the modem, it modifies the *packet headers* and assigns one of its ports to that *packet*. When the google server responds to the requests, it sends data back to the modem at this specific port, so the modem will know whether to route the *packets* to the laptop or the smart phone.
 In this sense,*IP addresses* aren’t specific to a computer, but more the connection which the computer connects to the Internet with. The address that is unique to your computer is the  [MAC address](https://en.wikipedia.org/wiki/MAC_address) , which never changes throughout the life of the computer.
 This protocol of mapping *private IP addresses* to *public* *IP* *addresses* is called the *Network Address Translation*(NAT) protocol. It’s what makes it possible to support 8+ billion networked devices with only 4 billion possible *IPv4* addresses.
 
 **How does the router know where to send a packet? Does it need to know where all the IP addresses are on the Internet?**<br>
-Every *router* does not need to know where every *IP address* is. It only needs to know which one of its neighbors, called an *outbound link,*to route each packet to. Note that *IP Addresses* can be broken down into two parts, a *network prefix* and a *host identifier*. 
+Every *router* does not need to know where every *IP address* is. It only needs to know which one of its neighbors, called an *outbound link,*to route each packet to. Note that *IP Addresses* can be broken down into two parts, a *network prefix* and a *host identifier*.
 
 For example, 129.42.13.69 can be broken down into
 Network Prefix: 129.42
@@ -131,7 +132,7 @@ HTML stands for Hyper Text Markup Language. HTML is the standard markup language
 
 By convention, an HTML file is saved with a .html or .htm extension.
 
-Inside this file, we organise the content using tags. Tags wrap the content, and each tag gives a special meaning to the text it wraps. 
+Inside this file, we organise the content using tags. Tags wrap the content, and each tag gives a special meaning to the text it wraps.
 
 
 
@@ -192,7 +193,7 @@ A paragraph of text         </p>
 
 All three paragraphs are same here. There is a property in CSS to change this behaviour, more on that later.
 
-Nested tags should be indented with 2 or 4 characters. This makes the document more readable. Readability is a very important metric of a good codebase. 
+Nested tags should be indented with 2 or 4 characters. This makes the document more readable. Readability is a very important metric of a good codebase.
 
 ### Document Head
 
@@ -210,7 +211,7 @@ This is the first tag nested into the html i.e. the first tag after opening the 
 	</head>
 </html>
 ```
- 
+
 The head tag is not used to show content on the webpage but to define the document properties. These properties are themselves stored in different tags so the head is just a container for other tags.
 
 Most used tags in the head are following:
@@ -231,7 +232,7 @@ There are two types of elements in body: block and inline.
 
 Block elements, when positioned in the page, do not allow other elements next to them. To the left, or to the right. Inline elements instead can sit next to other inline elements.
 Another difference is that inline elements can be contained in block elements. The reverse is not true.
- 
+
 Let’s see most common tags we’ll use in a HTML document body.
 
 **Text Based**
@@ -241,7 +242,7 @@ Let’s see most common tags we’ll use in a HTML document body.
 - br - an inline element which defines a line break. It doesn’t have a closing tag.
 - hr - an inline element which defines a line break. It doesn’t have a closing tag.
 - h1, h2, h3, h4, h5, h6 - These are heading tags in HTML, from biggest to smallest. These are also block elements and you can’t nest another element inside a heading.
-- strong - This tag marks the text inside it as strong. 
+- strong - This tag marks the text inside it as strong.
 
 There are many other text tags like em, quotes, pre etc. They are less used but you can check them out in the HTML documentation.
 
@@ -249,11 +250,11 @@ There are many other text tags like em, quotes, pre etc. They are less used but 
 **Lists**
 
 There are three types of lists in HTML.
-* unordered lists - <ul> 
+* unordered lists - <ul>
 * ordered lists - <ol>
-* definition lists - <dl> 
+* definition lists - <dl>
 
-Unordered and ordered lists are widely used, definition lists are not. 
+Unordered and ordered lists are widely used, definition lists are not.
 
 ```
 <ul>
@@ -288,7 +289,7 @@ List item 1
 List item 3
 				List item 4
 
-``` 
+```
 
 
 ```
@@ -327,7 +328,7 @@ You can nest link tags with images and blocks rather than just texts. To open th
 
 **Container Tags**
 
-These are most powerful tags in HTML as they can contain any set of tags inside them. 
+These are most powerful tags in HTML as they can contain any set of tags inside them.
 
 * article
 * section
@@ -340,13 +341,13 @@ section
 This represents a section of a document. Each section should have a heading tag (h1-h6) and the section body. This is used to break a long article or content into different parts.
 
 div
-This is the generic container element. It fits all shapes and forms to accommodate all your container needs. It almost always comes with a class or id attribute to this element, to allow it to be styled using CSS. 
+This is the generic container element. It fits all shapes and forms to accommodate all your container needs. It almost always comes with a class or id attribute to this element, to allow it to be styled using CSS.
 
 **Page Tags**
 
 These are the tags that are related to the whole page’s content.
 
-- nav 
+- nav
 - header
 - main
 - footer
@@ -359,21 +360,21 @@ header
 The header tag represents a part of the page that is the introduction. It can for example contain one or more heading tag (h1-h6), the tagline for the article, an image.
 
 main
-This represents the main part of a page. 
+This represents the main part of a page.
 
 footer
 The footer tag is used to determine the footer of an article or the page:
 
 
-HTML is a very forgiving language. To use these tags correctly is entirely upto the user’s judgement. You can have page with nothing but div tags or a page with every tag supported by HTML. 
-The right way to write HTML is using specific tags for specific purposes, leave styling to CSS and keeping the tags consistent throughout the site. 
+HTML is a very forgiving language. To use these tags correctly is entirely upto the user’s judgement. You can have page with nothing but div tags or a page with every tag supported by HTML.
+The right way to write HTML is using specific tags for specific purposes, leave styling to CSS and keeping the tags consistent throughout the site.
 
 
 ### Forms
 Forms are meant to interact with an application. A form is used to send some data or information from the client (browser) to the server. By default this data sending causes the page to reload after the data is sent, but using JavaScript and AJAX you can alter this behavior.
 
 **Method Attribute**
-By default forms are submitted using the GET HTTP method. Which has its drawbacks, and usually you want to use POST. To specific which method to use we do 
+By default forms are submitted using the GET HTTP method. Which has its drawbacks, and usually you want to use POST. To specific which method to use we do
 
 `method=“POST”`
 
@@ -398,7 +399,7 @@ Most commonly we use the following fields.
 
 
 **Input Tag**
-The input field is one of the most widely used form elements. It’s also a very versatile element, and it can completely change behavior based on the “type” attribute. 
+The input field is one of the most widely used form elements. It’s also a very versatile element, and it can completely change behavior based on the “type” attribute.
 
 There are many types like,
 
@@ -423,18 +424,18 @@ There are many types like,
 `<input type=“hidden” name=“user-id” value=“88273”>`
 
 
-- file 
+- file
 A file input used to upload documents on the server.
 
 `<input type=“file” name=“user-identification-document”>`
 
 
-- submit 
+- submit
 A button field used to submit the form, value attribute is used for the button.
 
 `<input type=“submit” value=“Submit form”>`
 
-- button 
+- button
 Another button field to perform any action other than submitting the form.
 
 `<input type=“button” value=“Some action”>`
@@ -605,7 +606,7 @@ Every HTML tag has a corresponding selector, for example: div, span, img. If a s
 
 As we learned in the HTML, there are two attributes which are commonly used to target elements. The class and id attributes, and the class can be repeated while the same id is only used for a single element.
 
-- Classes are identified using the . symbol, while ids using the # symbol. 
+- Classes are identified using the . symbol, while ids using the # symbol.
 
 The whole point of keeping multiple elements with the same class name is that we are able to style all these elements by targeting the class.
 
@@ -685,7 +686,7 @@ h3, .action {
 
 ```
 
-- We can create a more specific selector by combining multiple items to follow the document tree structure. 
+- We can create a more specific selector by combining multiple items to follow the document tree structure.
 
 ```
 
@@ -708,11 +709,11 @@ div p span.name {
 The above selector will also work if the nested element is deeper in the structure. To get just the first level deep span we can use ‘>’  instead of space (‘ ’).
 
 - We have more selectors we can use like,
-	* attribute selectors - 
+	* attribute selectors -
 	These are used to select an element by its attribute. For example, a		paragraph with id message can be selected by **p[id=“message”]**.
 
-	* pseudo class selectors 
-	Pseudo classes are predefined keywords that are used to select an 		element based on its state, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		button:disabled. 
+	* pseudo class selectors
+	Pseudo classes are predefined keywords that are used to select an 		element based on its state, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		button:disabled.
 
 	* pseudo element selectors
 	Pseudo elements are used to style a part of an element, there are five 		supported pseudo elements,
@@ -732,7 +733,7 @@ We can add any color to our elements using three properties,
 - background-color  - sets the color of the background.
 - border-color - set a color for the element’s border
 
-To select a color we have 
+To select a color we have
 - named color - a huge list of colors by name like red, blue, aqua, plum etc.
 - RGB and RGBa - RGB notation allow us to set color based on red-green-blue from 0 to 255. RGBa allows us to add an alpha unit (0 to 1) which controls the transparency.
 - Color Hex - The hexadecimal notation lets us express a number from 0 to 255 in just 2 digits, since they can go from 0 to “15” (f). So a RGB color can be expressed with 6 digits like rob(255,255,255) is FFFFFF.
@@ -750,7 +751,7 @@ p{
 
 p span{
 	color: rgba(255, 255, 255, 0.8);
-	border-color: #ccc; // grey and same as #cccccc 
+	border-color: #ccc; // grey and same as #cccccc
 }
 
 ```
@@ -773,7 +774,7 @@ There are also physical units like cm, mm, q (quarter of mm), in (inch) etc. The
 
 **URL**
 
-We can use @import to add another css file in the current one. 
+We can use @import to add another css file in the current one.
 
 `@import url(anotherfile.css)`
 
@@ -789,7 +790,7 @@ div {
 
 **CALC**
 
-The calc() function lets us perform basic math operations on values. Let’s say we need to have a div which is 20px less than 50% of the parent’s width. 
+The calc() function lets us perform basic math operations on values. Let’s say we need to have a div which is 20px less than 50% of the parent’s width.
 
 ```
 div {
@@ -805,7 +806,7 @@ We can do addition, subtraction, multiplication and division in calc.
 There are many properties related to backgrounds, mostly we will need:
 * background-color - sets a background color
 * background-image - sets a background image with url()
-* background-clip - defines how far the background (color or image) should extend within an element. 
+* background-clip - defines how far the background (color or image) should extend within an element.
 * background-position - sets a position of background within the element
 * background-origin - sets the background’s origin from the border start, inside the border, or inside the padding.
 * background-repeat - sets if a background should repeat and how
@@ -830,7 +831,7 @@ Just like background the font property is a shorthand for a number of properties
 ```
 font: <font-stretch> <font-style> <font-variant> <font-weight> <font-size> <line-height> <font-family>;
 ```
- 
+
 **How to load a custom font?**
 @font-face lets you add a new font family name, and map it to a file that holds a font. This file is usually one of the following type
 - woff (Web Open Font Format)
@@ -846,7 +847,7 @@ To add a new font we can do something like,
 
 @font-face {
   font-family: myFontName;
-  src: url(sansation_light.woff); 
+  src: url(sansation_light.woff);
 }
 
 p {
@@ -884,10 +885,10 @@ Starting from inside to outside we have: content area, padding, border and margi
 
 By default, when we set a width (or height) on the element it is applied to the content area. All the padding, border, and margin are done outside of the value, so we have to keep this in mind when you do your calculation.
 
-MARGIN 
+MARGIN
 The margin CSS property is used to add space around the element. The margin exists outside the border and touches the box model edges.
 
-Margin has 4 properties, each relative to one side of the element box. Margin can be used as a shorthand for these. 
+Margin has 4 properties, each relative to one side of the element box. Margin can be used as a shorthand for these.
 
 * margin-top
 * margin-right
@@ -918,16 +919,16 @@ div{
 
 // the order is top-right-bottom-left
 div{
-	margin: 10px 5px 10px 5px; 
+	margin: 10px 5px 10px 5px;
 }
 
 
 ```
 
 PADDING
-The padding CSS property is used to add space in the inner side of an element. The padding exists between the content area and border. 
+The padding CSS property is used to add space in the inner side of an element. The padding exists between the content area and border.
 
-Padding has 4 properties, each relative to one side of the element box. Padding can be used as a shorthand for these. 
+Padding has 4 properties, each relative to one side of the element box. Padding can be used as a shorthand for these.
 
 * padding-top
 * padding-right
@@ -958,7 +959,7 @@ div{
 
 // the order is top-right-bottom-left
 div{
-	padding: 10px 5px 10px 5px; 
+	padding: 10px 5px 10px 5px;
 }
 
 
@@ -981,16 +982,16 @@ The border is a thin layer between padding and margin. By setting the border, we
 The border property is used as a shorthand for all of these.
 border: <border-width> <border-color> <border-style>;
 
-- border-radius - sets the curve on the border edges, can be used to create rounded corners. 
+- border-radius - sets the curve on the border edges, can be used to create rounded corners.
 
 
 BOX SIZING
 
-The default behavior of applying the width and height to content area without taking padding, border or margin into account can be changed. 
+The default behavior of applying the width and height to content area without taking padding, border or margin into account can be changed.
 
 The box-sizing property has 2 values:
 * border-box - setting this will make width and height calculation include the padding and the border.
-* content-box - default 
+* content-box - default
 ```
 div {
   box-sizing: border-box;
@@ -1029,7 +1030,7 @@ Block
 Block displayed items are stacked one after other vertical and takes 100% of the parent. So, it starts on a new line, and takes up the whole width. The values assigned to the width and height properties are applied, if you set them, along with margin and padding.
 
 None
-Using display: none makes an element disappear. The item will not show up on the Html document. We can use this to hide status messages and alerts and switch the property when it’s relevant for them to be visible. 
+Using display: none makes an element disappear. The item will not show up on the Html document. We can use this to hide status messages and alerts and switch the property when it’s relevant for them to be visible.
 
 
 ### Positioning
@@ -1052,7 +1053,7 @@ An element with position: fixed; is positioned relative to the viewport, and it 
 * sticky
 This is positioned based on the user’s scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
 
-We can set top, left, bottom and right using any unit and it also supports negative values. 
+We can set top, left, bottom and right using any unit and it also supports negative values.
 
 ### Float
 
@@ -1063,11 +1064,11 @@ The float property can have one of the following values:
 * right - The element floats to the right of its container
 * none - This is default, element does not float.
 
-There is a clear property which specifies on which sides of an element floating elements are not allowed to float. 
+There is a clear property which specifies on which sides of an element floating elements are not allowed to float.
 
 If an element can fit horizontally in the space next to another element which is floated, it will. Unless you apply clear to that element in the same direction as the float. Then the element will move down below the floated element. You can think of clear like it clears any unwanted float that may get applied to it because of empty space in floated sibling elements.
 
-clear: both | left | right ; 
+clear: both | left | right ;
 
 ```
 
@@ -1083,7 +1084,7 @@ img{
 }
 
 p#p2{
-	clear: both; 
+	clear: both;
 }
 ```
 
@@ -1121,7 +1122,7 @@ We can also target multiple devices. For instance, this @mediarule uses two medi
 `@media screen, print { … }`
 
 
-Many media features are range features prefixed with “min-“ or “max-“ to express “minimum condition” or “maximum condition” constraints. 
+Many media features are range features prefixed with “min-“ or “max-“ to express “minimum condition” or “maximum condition” constraints.
 
 For example, to apply CSS to devices with max viewport width of 1200px we can use
 
@@ -1163,26 +1164,26 @@ You must load the normalizing CSS file before any other CSS.
 
 Javascript is the most popular programming language in the world.
 
-In 2007, Jeff Atwood made the quote that was popularly referred to as Atwood’s Law. “Any application that can be written in JavaScript, will eventually be written in JavaScript.” 
+In 2007, Jeff Atwood made the quote that was popularly referred to as Atwood’s Law. “Any application that can be written in JavaScript, will eventually be written in JavaScript.”
 
 Jeff Atwood is one of the founder of Stack Overflow.
 
 Javascript is probably the most versatile language out there. It can be used to create websites, web applications, create mobile applications and even a server side application.
 
-JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible— applications with which you can interact directly without doing a page reload for every action. JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness. 
+JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible— applications with which you can interact directly without doing a page reload for every action. JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness.
 
 After its adoption outside of Netscape, a standard document was written to describe the way the JavaScript language should work so that the various pieces of software that claimed to support JavaScript were actually talking about the same language. This is called the ECMAScript standard, after the Ecma International organization that did the standardization. In practice, the terms ECMAScript and JavaScript can be used interchangeably—they are two names for the same language.
 
-## Basics and Syntax 
+## Basics and Syntax
 
 ### Variables
 
-A variable is a value is assigned to an identifier. JavaScript variables are containers for storing data values. For example 
-` a = 1; ` 
+A variable is a value is assigned to an identifier. JavaScript variables are containers for storing data values. For example
+` a = 1; `
 
-Hear the letter ‘a’ is the identifier. In programming, just like in algebra, we use variables (like a, b, count) to hold values. In JavaScript, we can define variables in two ways using const, var and let. 
+Hear the letter ‘a’ is the identifier. In programming, just like in algebra, we use variables (like a, b, count) to hold values. In JavaScript, we can define variables in two ways using const, var and let.
 
-const defines a constant reference to a value. This means the reference cannot be changed. You cannot reassign a new value to it. 
+const defines a constant reference to a value. This means the reference cannot be changed. You cannot reassign a new value to it.
 
 Using let you can assign a new value to it. Var should no longer be used in modern codebases, as it was replaced by let.
 
@@ -1270,8 +1271,8 @@ a !== b // a is not equal to b? - true
 
 ### Conditionals
 
-Comparison operators are used to make comparisons between different variable, there are times when we need to perform unique actions based on a different conditions. 
-An if statement is used to make the program take one route, or another, depending on the result of an expression evaluation. 
+Comparison operators are used to make comparisons between different variable, there are times when we need to perform unique actions based on a different conditions.
+An if statement is used to make the program take one route, or another, depending on the result of an expression evaluation.
 
 ```
 if (true) {
@@ -1333,7 +1334,7 @@ A string is a sequence of characters, it is always enclosed in a single quote or
 **Basic String Operations**
 - Find string length - `message.length`
 - Join strings using ‘+’ - `message + ‘ and a new message’`
-- Change string case - `message.toLowerCase();message.toUpperCase();` 
+- Change string case - `message.toLowerCase();message.toUpperCase();`
 
 ### Loops
 Loops are a way to repeat some piece of code based on a condition. Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly based on a condition.
@@ -1414,7 +1415,7 @@ function getData(id, name) {
 getData(1, 'rish');
 ```
 
-We can pass a default value for a parameter which is used in case a parameter is not given during the call. 
+We can pass a default value for a parameter which is used in case a parameter is not given during the call.
 
 A function can have a return value which can be assigned to a variable.
 
@@ -1429,7 +1430,7 @@ var newAge = doubleAge(); // age will be 36
 
 
 ### Objects
-Any value that’s not of a primitive type is an object in js. So, an array or a string both are objects of type array and string respectively. 
+Any value that’s not of a primitive type is an object in js. So, an array or a string both are objects of type array and string respectively.
 
 Objects in JavaScript can be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
 
@@ -1453,7 +1454,7 @@ const person = {
 
 // Get or reset a value:
 
-person.name ;  // object style 	
+person.name ;  // object style
 person['name'];  // array style notation
 
 person.name = 'Rish Pandey';
@@ -1472,15 +1473,15 @@ If you pass an object to a function it is always passed by reference.
 
 
 ### Scope
-Scope is the set of variable which are visible or available to a part of program. 
+Scope is the set of variable which are visible or available to a part of program.
 
 There are three scopes available in js:
 
-- global scope 
-If a variable is declared outside a function or a block it’s attached to the global scope and is available to every part of the code. 
+- global scope
+If a variable is declared outside a function or a block it’s attached to the global scope and is available to every part of the code.
 Global variables can be altered by any part of the code, making it difficult to remember or reason about every possible use. A global variable can have no access control. It can not be limited to some part of the program.
 
-- block scope 
+- block scope
 A block is a set of instructions grouped into a pair of curly braces, like the ones we can find inside an if statement, a for loop, or a function. These variables are only available within the current block. Using ‘var’ does not work with block scope and assigns the variable to a function scope, that’s why it is recommended to use const or let.
 
 - function scope
@@ -1508,12 +1509,12 @@ function do(param){
 
 
 ### Errors
-Errors and exceptions usually occur when something doesn’t go as planned.  There are three types of errors in programming: 
+Errors and exceptions usually occur when something doesn’t go as planned.  There are three types of errors in programming:
 
 - Syntax Errors
 These are errors that occur during compiling or interpreting. If a piece or code is not written correctly then it is not possible for the javascript engine to make sense of it.
 
-For example, `let b = ;`  this will lead to 
+For example, `let b = ;`  this will lead to
 `Uncaught SyntaxError: Unexpected token ';'` which means that the there was a syntax error in the code and the semicolon was found where something else (like a number, string, object etc.) was expected.
 
 These types of errors are easiest to debug as the engine tells us exactly what is wrong and where.
@@ -1552,10 +1553,10 @@ Creating nodes
 
 ```
 // Create a <button> element
-var btn = document.createElement("BUTTON");   
+var btn = document.createElement("BUTTON");
 
 // Insert HTML between <button> and </button>
-btn.innerHTML = "CLICK ME";     
+btn.innerHTML = "CLICK ME";
 
 // Append <button> to <body>
 document.body.appendChild(btn);
@@ -1570,8 +1571,8 @@ document.getElementById('div-1').appendChild(btn);
 ```
 
 Element content
-- element.innerHTML - This property is used to modify HTML content of an element. You can also insert or nest another element inside an element using this. 
-- element.innerText - This changes the text content of an element. 
+- element.innerHTML - This property is used to modify HTML content of an element. You can also insert or nest another element inside an element using this.
+- element.innerText - This changes the text content of an element.
 
 Element Styling
 - element.style - used to modify the element CSS using js. This is used very commonly and supports all the properties of CSS.
@@ -1620,7 +1621,7 @@ el.addEventListener('click', clickHandlerFunction);
 ```
 
 - element.removeEventListener()
-An event listener added by calling addEventListener() can be removed by using element.removeEventListener. 
+An event listener added by calling addEventListener() can be removed by using element.removeEventListener.
 
 ```
 element.removeEventListener("click", clickHandlerFunction);
@@ -1659,7 +1660,7 @@ Allows to save key/value pairs in a web browser. Stores the data with no expirat
 // localStorage.setItem(key, value);
 localStorage.setItem('id', 10002);
 
-const id = localStorage.getItem('id'); 
+const id = localStorage.getItem('id');
 // id is 10002
 
 ```
@@ -1676,7 +1677,7 @@ const id = localStorage.getItem('id');
 
 Programming is the art of instructing computer to perform simple and complex tasks. A program is a set of instructions which are executed by the computer.
 
-Computers only understand one language that is binary, 0 and 1, on and off. Everything you need the computer to understand or do, needs to be instructed through these 0s and 1s. 
+Computers only understand one language that is binary, 0 and 1, on and off. Everything you need the computer to understand or do, needs to be instructed through these 0s and 1s.
 
 So, every source code needs to be translated into binary code so the computed can understand it. These translators can be:
  - Interpreters
@@ -1684,11 +1685,11 @@ So, every source code needs to be translated into binary code so the computed ca
  - Hybrid
  - Assembler
 
-Every programming language has some sort of translator. What a programming language does is that it allow you to write code which is understandable by people (after some learning) but can also be translated to a binary. 
+Every programming language has some sort of translator. What a programming language does is that it allow you to write code which is understandable by people (after some learning) but can also be translated to a binary.
 
 There are some things which are found in most programming languages. You can think of these as a basic set of features, we can use to write programs.
 
-- Keywords 
+- Keywords
 - Identifiers
 - Literals
 - Variables
@@ -1714,7 +1715,7 @@ Fast, flexible and pragmatic, PHP powers everything from your blog to the most p
 
 PHP works with the a web server like apache or nginx. When we type a URL into your web browser’s address bar, you’re sending a message to the web server at that URL, asking it to send you an HTML file. The web server responds by sending the requested file. Your browser reads the HTML file and displays the web page.
 
-When PHP is installed, the web server is configured to expect certain file extensions like .php to contain PHP language statements. 
+When PHP is installed, the web server is configured to expect certain file extensions like .php to contain PHP language statements.
 
 When the web server gets a request for a file with the designated extension, it sends the HTML statements as is, but PHP statements are processed by the PHP software before they’re sent to the requester. When PHP language statements are processed, only the output is sent to the web browser. The PHP code is not normally seen by the user.
 
@@ -1727,22 +1728,22 @@ To start working with PHP we need bunch of things:
 - Apache2  - the web server
 
 This one is not a requirement for PHP but almost every PHP project needs a database to persist data.
-- Mysql - a database management system 
+- Mysql - a database management system
 
-To set up all of these is time taking and kinda hard. We can use something like XAMPP or WAMP to save ourselves a lot of time and hassle. XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use. 
+To set up all of these is time taking and kinda hard. We can use something like XAMPP or WAMP to save ourselves a lot of time and hassle. XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 
-So, XAMPP is a software which we can install that will setup the whole environment for us. 
+So, XAMPP is a software which we can install that will setup the whole environment for us.
 
 You can install XAMPP from their main [website](https://www.apachefriends.org/index.html).
 
 
 ## Syntax and Basics
 
-There are many ways you can work with PHP. We will start off with the most basic one that is embedding PHP code in the HTML. 
+There are many ways you can work with PHP. We will start off with the most basic one that is embedding PHP code in the HTML.
 
 **PHP Tags**
 
-To embed php code in HTML we need to tell the server what part of the code is PHP and should be executed and attached to the rest of the documented. 
+To embed php code in HTML we need to tell the server what part of the code is PHP and should be executed and attached to the rest of the documented.
 
 ```
 
@@ -1755,7 +1756,7 @@ To embed php code in HTML we need to tell the server what part of the code is PH
 
 ```
 
-There are many types of tags in PHP. 
+There are many types of tags in PHP.
 - `<?php …. ?>`  - XML style tag, the only one you will use.
 - `<? ... ?>` - Short style tag, not recommended.
 - `<% … %>`  - ASP style tag, not recommended.
@@ -1763,7 +1764,7 @@ There are many types of tags in PHP.
 
 **PHP Statements**
 
-Everything we need the php interpreter to execute is inserted between the php tags, above example had one php statement, 
+Everything we need the php interpreter to execute is inserted between the php tags, above example had one php statement,
 `echo $site;` which will echo or print the value of variable $site.
 
 **Whitespace**
@@ -1774,7 +1775,7 @@ Spacing characters such as newlines (carriage returns), spaces, and tabs are kno
 
 echo 'one'; echo 'punch';     echo 'man';
 
-// same as 
+// same as
 
 echo 'one';
 echo 'punch';
@@ -1804,20 +1805,20 @@ The comments are ignored by the PHP parser (interpreter) and have no effect on p
 
 A php variable starts with ‘$’ and you must put it before every variable as long as it is not a constant.
 
-When creating PHP variables, there are four rules to follow: 
-- Variable names must start with a letter of the alphabet or the _ (underscore) character. 
-- Variable names can contain only the characters a-z, A-Z, 0-9, and _ (underscore). 
+When creating PHP variables, there are four rules to follow:
+- Variable names must start with a letter of the alphabet or the _ (underscore) character.
+- Variable names can contain only the characters a-z, A-Z, 0-9, and _ (underscore).
 - Variable names may not contain spaces. If a variable must comprise more than one word, the words should be separated with the _ (underscore) character (e.g., $user_name) or use camelCase notation (e.g. $userName)
 - Variable names are case-sensitive.
 
 
-NOTE: 
+NOTE:
 You must have noticed that we are using semicolons after every php statement. A semicolon in PHP is necessary and it denotes that a php expression is finished.
 
 
 Types of Variables:
 - String - sequence of characters like ‘yo yo’
-- Numeric - integers and doubles (decimal numbers) 
+- Numeric - integers and doubles (decimal numbers)
 - Boolean - true and false
 - Arrays - named and indexed collections of values.
 - Object - instances of classes, more about this later.
@@ -1833,9 +1834,9 @@ Constants are very similar to variables, the only difference is that we can’t 
 
 **Operators**
 
-There are many types of operators supported in PHP 
+There are many types of operators supported in PHP
 - Arithmetic Operators
-These are the operators used to perform arithmetic operations on variables. 
+These are the operators used to perform arithmetic operations on variables.
 We have addition, subtraction, multiplication, division, modulus, increment and decrement in PHP.
 
 - Assignment Operator
@@ -1844,7 +1845,7 @@ These are used to assign values to variables. In PHP, we have
 	- plus-equals (+=)
 	- minus-equals (-=)
 	- multiply-equals (*=)
-	- divide-equals (/=) 
+	- divide-equals (/=)
 	- concat-equals (.=)
 	- mod-equals (%=)
 
@@ -1854,20 +1855,20 @@ These are mostly seen inside an if-else block or a loop. These operators are use
 	- != Is not equal to
 	- > Is greater than
 	- < Is less than
-	- >= Is greater than or equal to 
-	- <= Is less than or equal to 
+	- >= Is greater than or equal to
+	- <= Is less than or equal to
 
-PHP is a loosely types language. For example, you can create a multiple-digit number and extract the nth digit from it, simply by assuming it to be a string. 
-
-```
-
-<?php $number = 121 * 133131; 
-echo substr($number, 3, 1); 
-?> 
+PHP is a loosely types language. For example, you can create a multiple-digit number and extract the nth digit from it, simply by assuming it to be a string.
 
 ```
 
-In the above example, $number is clearly a number but it is automatically converted to a string to accommodate substr(), such behavior is not possible in many other programming languages. 
+<?php $number = 121 * 133131;
+echo substr($number, 3, 1);
+?>
+
+```
+
+In the above example, $number is clearly a number but it is automatically converted to a string to accommodate substr(), such behavior is not possible in many other programming languages.
 
 This means, that we don’t have to worry a lot about the variable types too much in PHP. Is it a good thing? Most experts will disagree. But this reduces the learning curves and makes it very easy for beginners to get started.
 
@@ -1883,13 +1884,13 @@ function mergeStringsWithSpaces($str1, $str2){
 }
 
 // how to call
-$newString = mergeStringsWithSpaces('Hey', 'you'); 
+$newString = mergeStringsWithSpaces('Hey', 'you');
 
 echo $newString; // 'Hey you'
 
 ```
 
-In the above example $str1 and $str2 are function parameters. 
+In the above example $str1 and $str2 are function parameters.
 
 
 **Variable Scope**
@@ -1902,7 +1903,7 @@ These are related to a function. If a variable is created within or passed as an
 - Global Variable
 There are times when we need to declare a variable globally and make it available to the whole codebase. Global variables can be created by using the global keyword.
 
-- Static Variable 
+- Static Variable
 A local variable is destroyed on the function’s exit. There are specific use cases where we may need to keep a local variable shared between function calls, static variables can do that. A static variable will not lose its value when the function exits and will still hold that value should the function be called again. Static variables can be created by using the static keyword.
 
 - Superglobal Variables
@@ -1912,7 +1913,7 @@ These variables are provided by PHP environment and are accessible from everywhe
 	- $_SERVER - Information such as headers, paths, and script locations.
 	- $_GET - Variables passed to the current script via the HTTP GET method.
 	- $_POST - Variables passed to the current script via the HTTP POST method.
-	- $_FILES - Variable used to access and store uploaded files 
+	- $_FILES - Variable used to access and store uploaded files
 	- $_COOKIE - Variables passed to the current script via the HTTP cookies.
 	- $_SESSION - Current session variable in PHP
 	- $_REQUEST - Information passed by the browser
@@ -1921,7 +1922,7 @@ These variables are provided by PHP environment and are accessible from everywhe
 
 **Conditional Flow**
 
-Conditionals are used to change the program flow, they allow us to perform actions based on a condition. 
+Conditionals are used to change the program flow, they allow us to perform actions based on a condition.
 
 - If/else Statement
 
@@ -1945,10 +1946,10 @@ A switch statement is used when we have a number of different conditions like a 
 
 ```
 
-switch ($occupation) { 
+switch ($occupation) {
 	case "Doctor":
 		echo 'Welcome doctor, patients are waiting';
-		break; 
+		break;
 	case "Engineer":
 		echo 'Welcome engineer, construction is halted';
 		break;
@@ -1958,7 +1959,7 @@ switch ($occupation) {
 	default:
 		echo 'We don't know that occupation'l
 		break;
-} 
+}
 
 ```
 
@@ -1976,7 +1977,7 @@ if($age > 18){
 	$message = 'Not Allowed'
 }
 
-echo $message 
+echo $message
 
 // using ternary operator
 // This is same as above.
@@ -1998,29 +1999,29 @@ The condition is checked, if the condition is true then the loop is executed, an
 
 ```
 
-<?php 	$fuel = 50; 
-	while ($fuel > 1) { 
+<?php 	$fuel = 50;
+	while ($fuel > 1) {
 		// Keep driving
-		echo "We still have fuel"; 
+		echo "We still have fuel";
 	}
-?> 
+?>
 
 
 ```
 
 - Do while loop
 
-There is slight difference here, first the loop is executed, then the condition is checked. If the condition is true, then repeat. 
+There is slight difference here, first the loop is executed, then the condition is checked. If the condition is true, then repeat.
 Avoid this loop.
 
 ```
 
-<?php 	$fuel = 50; 
-	do { 
+<?php 	$fuel = 50;
+	do {
 		// Keep driving
-		echo "We still have fuel"; 
+		echo "We still have fuel";
 	} while ($fuel > 2);
-?> 
+?>
 
 
 ```
@@ -2031,12 +2032,12 @@ This is the most used loop as this has the ability to set up counter variable, c
 
 ```
 <?php 
-	for ($fuel = 50; $fuel > 1 ; $fuel--) { 
-		// Keep driving 
-		echo "We still have fuel"; 
-	} 
+	for ($fuel = 50; $fuel > 1 ; $fuel--) {
+		// Keep driving
+		echo "We still have fuel";
+	}
 
-?> 
+?>
 
 
 ```
@@ -2063,11 +2064,11 @@ We can use the ‘break’ keyword to break out of the current loop just like th
 PHP automatically converts the values from one type to another whenever needed, that’s called implicit casting. To manually cast a variable to another type we can use manual casting.
 
 - (int) $var - Cast to an integer, remove decimals
-- (bool) $var - Cast to boolean 
+- (bool) $var - Cast to boolean
 - (float) / (double) / (real) $var - Cast to decimal number
 - (string) $var - Cast to string
 - (array) $var - Cast to array - creates an array with first element $var
-- (object) $var - Cast to object 
+- (object) $var - Cast to object
 
 
 **PHP Arrays**
@@ -2078,7 +2079,7 @@ Array is a collection of data. In PHP, we can create an array of any type of dat
 $people = ['Holt', 'Yousuf', 'Jim'];
 $people = array('Holt', 'Yousuf', 'Jim'); // same as above
 
-// accessing 
+// accessing
 echo $people[0]; // Holt
 
 // push to array
@@ -2087,7 +2088,7 @@ $people[] = 'Joe';
 ```
 
 Associative Array
-Normal arrays have numeric indices starting from 0, we can name our own indices as we want in PHP. 
+Normal arrays have numeric indices starting from 0, we can name our own indices as we want in PHP.
 
 ```
 
@@ -2125,7 +2126,7 @@ $vehicle = array(
 	),
 )
 
-// access 
+// access
 echo $vehicle['car']['honda'];
 echo $vehicle['misc']['toy']['car'];
 ```
@@ -2134,12 +2135,12 @@ echo $vehicle['misc']['toy']['car'];
 Array Functions
 - is_array - Check if a variable is array.
 - count - Get the count of all elements in array
-- sort/rsort - Used to sort an array, accepts second argument `SORT_NUMERIC or SORT_STRING`. 
+- sort/rsort - Used to sort an array, accepts second argument `SORT_NUMERIC or SORT_STRING`.
 - explode - converts a string to array
 - implode - converts an array to string
 - compact - converts a variable to key/value pair in array
 - extract - converts an array key/value pair to variable
-- 
+-
 
 
 **Including PHP Files**
@@ -2149,7 +2150,7 @@ To keep our PHP code manageable, we should keep our files lean and keep relevant
 - include statement
 This method will act like you copy and pasted the entire file on the location where the include is called.
 
-- include_once 
+- include_once
 To make sure that the file is only include once we use `include_once`. Let’s say we have two libraries which include each other, if we add these libraries using include it will lead to each library being included twice. We should use `include_once` in most places.
 
 ```
@@ -2168,11 +2169,11 @@ If we use include and the file is not found the program will continue as usual. 
 ## Object Oriented PHP
 * Class − This is a programmer-defined data type, which includes local functions as well as local data. You can think of a class as a template for making many instances of the same kind (or class) of object, a blueprint for an object.
 
-* Object − An instance of the data structure defined by a class. We define a class once and then make many objects that belong to it. So if we have a Car class, we can have a bunch of different car objects with individual parameters.   
+* Object − An instance of the data structure defined by a class. We define a class once and then make many objects that belong to it. So if we have a Car class, we can have a bunch of different car objects with individual parameters.
 
 * Inheritance − If we want to have an ‘is-a’ relationship between two classes, we use inheritance, let’s say we have a ‘Car’ class and a ‘FordCar’ class, here is the FordCar is also a Car and called as a child class. A child class will inherit all or few member functions and variables of a parent class.
 
-* Polymorphism − An object oriented concept where same function can be used for different purposes. 
+* Polymorphism − An object oriented concept where same function can be used for different purposes.
 
 * Data Abstraction − Any representation of data in which the implementation details are hidden (abstracted). We can achieve this using encapsulation in OOP which refers to a concept where we encapsulate all the data and member functions together to form an object.
 
@@ -2210,7 +2211,7 @@ $car2 = new Car();
 
 ```
 
-- We can access a class’s property or call a method using the arrow operator `->`. 
+- We can access a class’s property or call a method using the arrow operator `->`.
 
 
 **Constructor**
@@ -2223,13 +2224,13 @@ class Car {
 	public $model;
 	public $mileage;
 
-	function __construct($modelName, $mileage) 
+	function __construct($modelName, $mileage)
 	{
 		$this->model = $modelName;
 		$this->mileage = $mileage;
-	}	
+	}
 
-	function drive() 
+	function drive()
 	{
 		echo 'driving a generic car';
 	}
@@ -2256,7 +2257,7 @@ class Car {
 	{
 		return "For more information, call us at 000-000";
 	}
-	
+
 }
 
 // We can call the method using
@@ -2277,10 +2278,10 @@ class Car {
 	public $model;
 	const $brand = 'Ford';
 
-	function __construct($modelName) 
+	function __construct($modelName)
 	{
 		$this->model = $modelName;
-	}	
+	}
 
 }
 
@@ -2293,7 +2294,7 @@ echo Car::model; // Ford
 
 // This works but not recommended
 echo $car::brand; // Ford
-``` 
+```
 
 
 **Scope in PHP Classes**
@@ -2301,16 +2302,16 @@ echo $car::brand; // Ford
 There are three scopes for all variables and method in PHP classes.
 
 - public
-These properties are the default when declaring a variable or method. These are accessible using the arrow operator on the object. 
+These properties are the default when declaring a variable or method. These are accessible using the arrow operator on the object.
 
 Should be used on methods and where outside code should access this member.
 
 - protected
-These properties and methods can be referenced only by the object’s class methods and those of any child classes (inheritance). 
+These properties and methods can be referenced only by the object’s class methods and those of any child classes (inheritance).
 
 Should be used on variables and properties where we don’t want them to be accessed from outside (using arrow) and still want to allow inheritance.
 
-- private 
+- private
 These members can be referenced only by methods within the same classes and not even by the child classes.
 
 Should be used for properties which we do not wish to pass to child classes.
@@ -2325,10 +2326,10 @@ class Car {
 
 	protected $model;
 
-	function __construct($modelName) 
+	function __construct($modelName)
 	{
 		$this->model = $modelName;
-	}	
+	}
 
 	function drive()
 	{
@@ -2355,7 +2356,7 @@ To access the property or call a method of a parent class we can do something li
 
 **Encapsulation**
 
-We can use encapsulation to create has-a relationship between objects. 
+We can use encapsulation to create has-a relationship between objects.
 
 ```
 // singleton pattern
@@ -2391,13 +2392,13 @@ echo $app->User()->getName();
 ```
 
 
-### Date and Time 
-PHP uses standard UNIX timestamps to manage date/time. This timestamp is the number of seconds elapsed since midnight Jan 1, 1970. 
+### Date and Time
+PHP uses standard UNIX timestamps to manage date/time. This timestamp is the number of seconds elapsed since midnight Jan 1, 1970.
 
 ```
 
-echo time(); 
-// returns the number of seconds it has been since Midnight Jan 1 1970 
+echo time();
+// returns the number of seconds it has been since Midnight Jan 1 1970
 
 ```
 
@@ -2408,42 +2409,42 @@ To display a date, we use the date function. This function supports a lot of for
 
 date($format, $timestamp);
 
-``` 
+```
 
 **Date Formats**
 Day specifiers
-	- d  - Day of month, two digits, with leading zeros -  01 to 31 
-	- D - Day of week, three letters  - Mon to Sun 
-	- j - Day of month, no leading zeros - 1 to 31 
-	- l - Day of week, full names  - Sunday to Saturday 
-	- N - Day of week, numeric, Monday to Sunday -1 to 7 
-	- S - Suffix for day of month (useful with specifier j) - st, nd, rd, or th 
-	- w - Day of week, numeric, Sunday to Saturday - 0 to 6 
-	- z - Day of year - 0 to 365 
+	- d  - Day of month, two digits, with leading zeros -  01 to 31
+	- D - Day of week, three letters  - Mon to Sun
+	- j - Day of month, no leading zeros - 1 to 31
+	- l - Day of week, full names  - Sunday to Saturday
+	- N - Day of week, numeric, Monday to Sunday -1 to 7
+	- S - Suffix for day of month (useful with specifier j) - st, nd, rd, or th
+	- w - Day of week, numeric, Sunday to Saturday - 0 to 6
+	- z - Day of year - 0 to 365
 
-Week specifier 
-	- W - Week number of year - 01 to 52 
+Week specifier
+	- W - Week number of year - 01 to 52
 
-Month specifiers 
-	- F - Month name - January to December 
-	- m - Month number with leading zeros - 01 to 12 
-	- M - Month name, three letters - Jan to Dec 
-	- n - Month number, no leading zeros - 1 to 12 
-	- t - Number of days in given month - 28, 29, 30, or 31 
+Month specifiers
+	- F - Month name - January to December
+	- m - Month number with leading zeros - 01 to 12
+	- M - Month name, three letters - Jan to Dec
+	- n - Month number, no leading zeros - 1 to 12
+	- t - Number of days in given month - 28, 29, 30, or 31
 
-Year specifiers 
-	- L - Leap year - 1 = Yes, 0 = No 
-	- Y - Year, four digits - 0000 to 9999 
-	- y - Year, two digits - 00 to 99 
+Year specifiers
+	- L - Leap year - 1 = Yes, 0 = No
+	- Y - Year, four digits - 0000 to 9999
+	- y - Year, two digits - 00 to 99
 
-Time specifiers 
-	- a - Before or after midday, lowercase - am or pm 
-	- A - Before or after midday, uppercase - AM or PM 
-	- g - Hour of day, 12-hour format, no leading zeros - 1 to 12 
-	- G - Hour of day, 24-hour format, no leading zeros - 1 to 24 
-	- h - Hour of day, 12-hour format, with leading zeros - 01 to 12 
-	- H - Hour of day, 24-hour format, with leading zeros - 01 to 24 
-	- I - Minutes, with leading zeros - 00 to 59 
+Time specifiers
+	- a - Before or after midday, lowercase - am or pm
+	- A - Before or after midday, uppercase - AM or PM
+	- g - Hour of day, 12-hour format, no leading zeros - 1 to 12
+	- G - Hour of day, 24-hour format, no leading zeros - 1 to 24
+	- h - Hour of day, 12-hour format, with leading zeros - 01 to 12
+	- H - Hour of day, 24-hour format, with leading zeros - 01 to 24
+	- I - Minutes, with leading zeros - 00 to 59
 	- s - Seconds, with leading zeros - 00 to 59
 
 ```
@@ -2455,13 +2456,13 @@ echo date("l F jS, Y - g:i a", time());
 ```
 
 
-### Exception Handling 
+### Exception Handling
 
 Exceptions provide control over runtime error handling.
 
 - Try
 A try block contains the part of code that can cause an exception. If a exception is triggered it’s thrown, if not then the normal flow is continued.
- 
+
 - Catch
 A catch block is used to cater to the situation when the exception occurred. If an exception is thrown it’s caught by the catch block.
 
@@ -2496,9 +2497,9 @@ In this section we will improve our core programming skills and do an introducti
 
 **Stack**
 
-A stack is a pile of objects arranged in layers. For example a stack of trays in the school cafeteria. 
+A stack is a pile of objects arranged in layers. For example a stack of trays in the school cafeteria.
 
-In computer science, a stack is a sequential collection with a particular property, in that, the last object placed on the stack, will be the first object removed, referred to as last in first out, or LIFO. 
+In computer science, a stack is a sequential collection with a particular property, in that, the last object placed on the stack, will be the first object removed, referred to as last in first out, or LIFO.
 
 The basic operations which define a stack are:
 * init – create the stack.
@@ -2514,8 +2515,8 @@ class BucketList
 {
     protected $stack;
     protected $limit;
-    
-    public function __construct($limit = 100) 
+
+    public function __construct($limit = 100)
 	  {
         // initialize the stack
         $this->stack = array();
@@ -2524,14 +2525,14 @@ class BucketList
         $this->limit = $limit;
     }
 
-    public function push($item) 
+    public function push($item)
     {
         // check if stack limit is reached
         if (count($this->stack) < $this->limit) {
 			  // add item to array start
             array_unshift($this->stack, $item);
         } else {
-            throw new Exception('Stack is full!'); 
+            throw new Exception('Stack is full!');
         }
     }
 
@@ -2575,8 +2576,8 @@ class BucketList
 {
     protected $queue;
     protected $limit;
-    
-    public function __construct($limit = 100) 
+
+    public function __construct($limit = 100)
 	  {
         // initialize the stack
         $this->queue = array();
@@ -2585,14 +2586,14 @@ class BucketList
         $this->limit = $limit;
     }
 
-    public function enqueue($item) 
+    public function enqueue($item)
     {
         // check if stack limit is reached
         if (count($this->queue) < $this->limit) {
 			  // add item to array end
             array_push($this->queue, $item);
         } else {
-            throw new Exception('Queue is at capacity!'); 
+            throw new Exception('Queue is at capacity!');
         }
     }
 
@@ -2659,34 +2660,34 @@ function getFactorial($number) {
 ```
 
 function checkIfPrimeSlow($number)
-{ 
-    if ($number == 1) 
-    return 0; 
-    for ($i = 2; $i <= $number/2; $i++){ 
-        if ($number % $i == 0) 
-            return false; 
-    } 
-    return true; 
-} 
-  
+{
+    if ($number == 1)
+    return 0;
+    for ($i = 2; $i <= $number/2; $i++){
+        if ($number % $i == 0)
+            return false;
+    }
+    return true;
+}
+
 ```
 
-We need to optimize this. If you think about it, a larger factor of n must be a multiple of smaller factor. 
+We need to optimize this. If you think about it, a larger factor of n must be a multiple of smaller factor.
 
-So we only need to check smaller factors to be to find out if this is a prime number. Smaller factors will be less than factors which are equal, the square root of the number.  
+So we only need to check smaller factors to be to find out if this is a prime number. Smaller factors will be less than factors which are equal, the square root of the number.
 
 ```
 function primeCheck($number)
-{ 
-    if ($number == 1) 
-    return 0; 
-      
-    for ($i = 2; $i <= sqrt($number); $i++){ 
-        if ($number % $i == 0) 
-            return 0; 
-    } 
-    return 1; 
-} 
+{
+    if ($number == 1)
+    return 0;
+
+    for ($i = 2; $i <= sqrt($number); $i++){
+        if ($number % $i == 0)
+            return 0;
+    }
+    return 1;
+}
 
 ```
 
@@ -2704,11 +2705,11 @@ function bubbleSort($array) {
 	if (!$length = count($array)) {
 		return $array;
 	}
-	
+
 	// run through each element of the array
 	for ($outer = 0; $outer < $length; $outer++) {
 
-		// compare each element with all others 		for ($inner = 0; $inner < $length; $inner++) { 			
+		// compare each element with all others 		for ($inner = 0; $inner < $length; $inner++) { 
 			// replace if the current one is smaller
 			if ($array[$outer] < $array[$inner]) { 				$tmp = $array[$outer]; 				$array[$outer] = $array[$inner]; 				$array[$inner] = $tmp;
 			}
@@ -2728,11 +2729,11 @@ The works by splitting the array into smaller and smaller pieces eventually merg
 
 ```
 
-function quickSort($array) {	
+function quickSort($array) {
 	// array is empty
 	if (!$length = count($array)) {
 		return $array;
-	} 	
+	} 
 	// get a random key
 	$key = $array[0];
 
@@ -2745,11 +2746,11 @@ function quickSort($array) {
 			$highValues[] = $array[$i];
 		}
 	}
-	
-	/* 
+
+	/*
 	all values less than key are in lessValues and all greater than key are in highValues
 	*/
-	
+
 
 	// quick sort both arrays recursively and merge with key in between
 
@@ -2780,7 +2781,7 @@ A lot of stuff related to file uploads is handled by the browser. We just need t
 </body>
 </html>
 
-``` 
+```
 
 This will upload the file to server and send the uploaded file to the file_upload.php file.
 
@@ -2788,7 +2789,7 @@ This will upload the file to server and send the uploaded file to the file_uploa
 
 <?php
 
-if ($_FILES) { 
+if ($_FILES) {
 	$name = $_FILES['filename']['name'];
 	move_uploaded_file($_FILES['filename']['tmp_name'], $name);
 	echo "Uploaded image $name";
@@ -2819,10 +2820,10 @@ SQL Keywords:
 - Database - A container of relevant MySQL data and tables.
 - Table - A container for actual data. A table is a collection of rows and columns. Tables are also known as entities or relations.
 - Rows - A row or record contains data for a single item or record in a table.
-- Columns - A column or field contains data for a specific characteristic of the records in the table. 
+- Columns - A column or field contains data for a specific characteristic of the records in the table.
 - Relationships - A link between two tables.
-- Datatypes - A column can only contain values of the same datatype example: int, varchar, text etc. 
-- Keys 
+- Datatypes - A column can only contain values of the same datatype example: int, varchar, text etc.
+- Keys
 	- Primary Keys - This is a unique identifier (a column) for a table used for efficient searching.
 	- Foreign Keys - This is a link to another table’s primary key, used to establish a relationship between tables.
 
@@ -2850,7 +2851,7 @@ MySQL has a very sophisticated access control system.  There is a ‘root’ use
 
 > FLUSH PRIVILEGES;
 
-``` 
+```
 
 
 List of privileges
@@ -2879,11 +2880,11 @@ A table is a single entity like a user or blog_post and can have all data relate
 
 ```
 
-> CREATE TABLE users ( 
+> CREATE TABLE users (
 	id int auto_increment,
-	name VARCHAR(128), 
-	title VARCHAR(128), 
-	type VARCHAR(16), 
+	name VARCHAR(128),
+	title VARCHAR(128),
+	type VARCHAR(16),
 	birth_year CHAR(4),
 	primary key(id)
 ) ENGINE MyISAM;
@@ -2897,11 +2898,11 @@ A table is a single entity like a user or blog_post and can have all data relate
 
 Each column has the following info,
 - Field - name of each field or column
-- Type - datatype being stored in the field. 
-- Null - Whether the field is allowed to contain a value of NULL. 
-- Key - shows what type of key (if any) has been applied. 
+- Type - datatype being stored in the field.
+- Null - Whether the field is allowed to contain a value of NULL.
+- Key - shows what type of key (if any) has been applied.
 - Default - default value that will be assigned if no value is specified .
-- Extra Additional information like `auto_increment` or `CURRENT_TIMESTAMP`. 
+- Extra Additional information like `auto_increment` or `CURRENT_TIMESTAMP`.
 
 
 **Data types**
@@ -2916,10 +2917,10 @@ Numeric Types:
 - BIT - A bit field
 
 String Types:
-- CHAR - A fixed-length nonbinary (character) string, 
+- CHAR - A fixed-length nonbinary (character) string,
 - VARCHAR - A variable-length non-binary string
 - BINARY - A fixed-length binary string
-- BLOB - A small BLOB  
+- BLOB - A small BLOB
 - TEXT - A small non-binary string
 - ENUM - An enumeration; each column value may be assigned one enumeration member
 - SET - A set; each column value may be assigned zero or more SET members
@@ -2982,7 +2983,7 @@ DROP user_info;
 ```
 
 // get all data
-SELECT * FROM user_info; 
+SELECT * FROM user_info;
 
 // get specific column
 SELECT birth_year from user_info;
@@ -3012,13 +3013,13 @@ This is used to filter other queries like select and delete.
 
 ```
 
-// We can do arithmetic (>, <, >=, <=, =, !=) 
+// We can do arithmetic (>, <, >=, <=, =, !=)
 SELECT * FROM user_info WHERE id > 1;
 
 // LIKE is used for string matching
 SELECT * FROM user_info WHERE name LIKE 'RISH';
 
-// LIKE with % is used to match substring, 
+// LIKE with % is used to match substring,
 // % is here substituted for, ends with any string
 SELECT * FROM user_info WHERE name LIKE 'RISH%';
 
@@ -3075,7 +3076,7 @@ We can also use limit, order by and group by with update as well.
 
 
 **Joins**
-SQL is a RDBMS or Relational Database Management System. All data is stored using tables and relations between these tables. 
+SQL is a RDBMS or Relational Database Management System. All data is stored using tables and relations between these tables.
 
 Let’s create another table,
 
@@ -3117,19 +3118,19 @@ SELECT user_info.name, payments.total_price from user_info JOIN payments ON user
 
 ### Normalization and Basics of Good DB Design
 
-Normalization is the process of separating data into tables to make the database more efficient and avoid duplication. 
+Normalization is the process of separating data into tables to make the database more efficient and avoid duplication.
 
 There are many normal forms in database design, we will learn about the first three as they are most important and apply everywhere.
 
 - 1NF
-	1. There should be no repeating columns containing the same kind of data. 
-	2. All columns should contain a single value, multivalve column are inefficient. 
+	1. There should be no repeating columns containing the same kind of data.
+	2. All columns should contain a single value, multivalve column are inefficient.
 	3. There should be a primary key to uniquely identify each row.
 
 This largely deals with removing duplication and redundancy in multiple columns.
 
 ```
-Given: 
+Given:
 
 ID   Name   Courses
 ------------------
@@ -3152,11 +3153,11 @@ ID   Name   Course
 
 - 2NF
 	1. Must be in 1NF.
-	2. The table should have no partial dependencies. 
+	2. The table should have no partial dependencies.
 
 Partial Dependency occur when non prime attribute depends on the subset/part of candidates key (more than one primary key).
 
-A candidate key is a column, or set of columns, in a table that can uniquely identify any database record without referring to any other data. 
+A candidate key is a column, or set of columns, in a table that can uniquely identify any database record without referring to any other data.
 Each table may have one or more candidate keys, but one candidate key is unique, and it is called the primary key.
 
 
@@ -3169,7 +3170,7 @@ For this table we have,
 Candidate Key: Id, Product
 Non prime attribute : Price
 
-Price attribute only depends on only Product attribute which is a subset of candidate key, not the whole candidate key(Id, Product) key. 
+Price attribute only depends on only Product attribute which is a subset of candidate key, not the whole candidate key(Id, Product) key.
 It is called partial dependency.
 
 So we can say that Product->Price is partial dependency.
@@ -3181,7 +3182,7 @@ Creating another table with Product and Price will normalize this table in 2NF.
 
 Data that is not dependent on primary key but that is dependent on another column should be moved to separate table.
 
-Example: 
+Example:
 We have another table
 Students (id, name, state, country, age)
 
@@ -3289,7 +3290,7 @@ $query = 'SELECT * FROM user_info';
 // Perform query to get count
 if ($result = $connection->query($query)){
 	echo "Returned rows are: " . $result -> num_rows;
-  
+
 	// Free result set
   $result->free_result();
 }
@@ -3319,7 +3320,7 @@ VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($connection->query($sql) === TRUE) {
 	$last_id = $connection->insert_id;
-  echo "New record created successfully with id:$last_id";	
+  echo "New record created successfully with id:$last_id";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -3331,7 +3332,7 @@ if ($connection->query($sql) === TRUE) {
 We can do update and delete similarly.
 
 
-### Using PDO 
+### Using PDO
 
 PDO stands for PHP data objects. PDO is the recommended way of working with databases now, as it works with 12 different databases including MySQL.
 
@@ -3352,7 +3353,7 @@ PDO stands for PHP data objects. PDO is the recommended way of working with data
   $connection = new PDO($dsn, $user, $password);
 
   // Set PDO::FETCH_OBJ as fetch() default attributes
-	// To return records as objects when fetch is called 
+	// To return records as objects when fetch is called
   $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 ```
 
@@ -3375,7 +3376,7 @@ PDO stands for PHP data objects. PDO is the recommended way of working with data
 	}
 
 ```
-  
+
 - Prepared Statements
 Prepared statements can help increase security by separating SQL logic from the data being supplied. This separation of logic and data can help prevent a very common type of vulnerability called an SQL injection attack.
 
@@ -3400,11 +3401,11 @@ Prepared statements can help increase security by separating SQL logic from the 
 	$stmt = $connection->prepare($sql);
 	$stmt->execute(['title' => $title]);
 	$users = $stmt->fetchAll();
-	
+
 	// row count
 	$userCount = $stmt->rowCount();
 
-	// print 
+	// print
   foreach ($users as $users) {
     echo $users->title . '<br>';
   }

@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Articles
 description: The list of blog posts for the site
 pagination:
     collection: posts

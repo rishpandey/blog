@@ -7,6 +7,7 @@ description: The craftsman mindset is a great way of thinking about your work.
 cover_image: https://images.unsplash.com/photo-1473621038790-b778b4750efe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60
 featured: false
 categories: [coding]
+keywords: programming, stack, artisan, craftsman, pragmatic programmer
 ---
 
 In the book, the pragmatic programmer, there is a section where the author compares a programmer to a craftsman.

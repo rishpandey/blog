@@ -6,6 +6,7 @@ cover_image: https://images.unsplash.com/photo-1554769944-3138b076c38a?q=80&w=38
 date: 2024-08-1
 featured: true
 categories: [laravel, php]
+keywords: php, laravel, service container, dependency injection, laravel service container
 ---
 
 In the world of modern PHP development, Service Containers (also known as Dependency Injection Containers) are really popular for managing class dependencies and promoting modular, testable code. Frameworks like Laravel and Symfony provide robust service containers out of the box. But most of the time developers have a hard time really understanding service containers.
@@ -155,7 +156,7 @@ class Container implements ContainerInterface
         if (!class_exists($class)) {
             throw new Exception("Class {$class} does not exist.");
         }
-			
+
         // Uses PHP's Reflection API to inspect the class's properties and methods.
         $reflector = new ReflectionClass($class);
 
@@ -163,7 +164,7 @@ class Container implements ContainerInterface
         if (!$reflector->isInstantiable()) {
             throw new Exception("Class {$class} is not instantiable.");
         }
-        
+
         // Get constuctor if exists
         $constructor = $reflector->getConstructor();
 
@@ -221,7 +222,7 @@ class Container implements ContainerInterface
   - `getDependencies($parameters)`: Resolves each constructor parameter by recursively calling `get()`.
 
 
-This implementation allows the container to manage services and automatically resolve dependencies, promoting loose coupling in your applications. 
+This implementation allows the container to manage services and automatically resolve dependencies, promoting loose coupling in your applications.
 
 Our `Container` is like a smart pantry:
 
@@ -243,7 +244,7 @@ We can now register services with our container.
 require 'ContainerInterface.php';
 require 'Container.php';
 
-// Example service class 
+// Example service class
 class Logger
 {
     public function log(string $message)
@@ -252,7 +253,7 @@ class Logger
     }
 }
 
-// Example service class 
+// Example service class
 class UserRepository
 {
     private Logger $logger;
@@ -423,7 +424,7 @@ We've built a simple yet powerful service container that can register services, 
 
 #### What's left?
 
-- **Facade Support**: Laravel uses facades to provide a static interface to classes in the container. 
+- **Facade Support**: Laravel uses facades to provide a static interface to classes in the container.
 
 - **Event System**: Laravel's container integrates with an event system for more dynamic binding.
 
@@ -436,4 +437,4 @@ We've built a simple yet powerful service container that can register services, 
 - **Contextual Binding**: Provide different implementations based on where the dependency is injected.
 
 
-Understanding the inner workings of a service container enhances our ability to design better software architectures. While our container is rudimentary compared to Laravel's, it serves as a solid foundation for grasping the concepts of dependency injection and service management in PHP. 
+Understanding the inner workings of a service container enhances our ability to design better software architectures. While our container is rudimentary compared to Laravel's, it serves as a solid foundation for grasping the concepts of dependency injection and service management in PHP.

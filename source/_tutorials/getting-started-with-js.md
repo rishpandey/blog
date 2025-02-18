@@ -2,33 +2,34 @@
 extends: _layouts.post
 section: content
 title: "Getting Started with Web Development: Intro to Javascript"
-excerpt: A crash course of js, everything you need to get started with adding whole lot of awesome to your web pages. 
+excerpt: A crash course of js, everything you need to get started with adding whole lot of awesome to your web pages.
 date: 2021-03-30
 categories: [basics]
+keywords: javascript, web development, programming, js, frontend
 ---
 
 Javascript is the most popular programming language in the world.
 
-In 2007, Jeff Atwood made the quote that was popularly referred to as Atwood’s Law. “Any application that can be written in JavaScript, will eventually be written in JavaScript.” 
+In 2007, Jeff Atwood made the quote that was popularly referred to as Atwood’s Law. “Any application that can be written in JavaScript, will eventually be written in JavaScript.”
 
 Jeff Atwood is one of the founder of Stack Overflow.
 
 Javascript is probably the most versatile language out there. It can be used to create websites, web applications, create mobile applications and even a server side application.
 
-JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible— applications with which you can interact directly without doing a page reload for every action. JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness. 
+JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The language has since been adopted by all other major graphical web browsers. It has made modern web applications possible— applications with which you can interact directly without doing a page reload for every action. JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness.
 
 After its adoption outside of Netscape, a standard document was written to describe the way the JavaScript language should work so that the various pieces of software that claimed to support JavaScript were actually talking about the same language. This is called the ECMAScript standard, after the Ecma International organization that did the standardization. In practice, the terms ECMAScript and JavaScript can be used interchangeably—they are two names for the same language.
 
-## Basics and Syntax 
+## Basics and Syntax
 
 ### Variables
 
-A variable is a value is assigned to an identifier. JavaScript variables are containers for storing data values. For example 
-` a = 1; ` 
+A variable is a value is assigned to an identifier. JavaScript variables are containers for storing data values. For example
+` a = 1; `
 
-Hear the letter ‘a’ is the identifier. In programming, just like in algebra, we use variables (like a, b, count) to hold values. In JavaScript, we can define variables in two ways using const, var and let. 
+Hear the letter ‘a’ is the identifier. In programming, just like in algebra, we use variables (like a, b, count) to hold values. In JavaScript, we can define variables in two ways using const, var and let.
 
-const defines a constant reference to a value. This means the reference cannot be changed. You cannot reassign a new value to it. 
+const defines a constant reference to a value. This means the reference cannot be changed. You cannot reassign a new value to it.
 
 Using let you can assign a new value to it. Var should no longer be used in modern codebases, as it was replaced by let.
 
@@ -116,8 +117,8 @@ a !== b // a is not equal to b? - true
 
 ### Conditionals
 
-Comparison operators are used to make comparisons between different variable, there are times when we need to perform unique actions based on a different conditions. 
-An if statement is used to make the program take one route, or another, depending on the result of an expression evaluation. 
+Comparison operators are used to make comparisons between different variable, there are times when we need to perform unique actions based on a different conditions.
+An if statement is used to make the program take one route, or another, depending on the result of an expression evaluation.
 
 ```
 if (true) {
@@ -179,7 +180,7 @@ A string is a sequence of characters, it is always enclosed in a single quote or
 **Basic String Operations**
 - Find string length - `message.length`
 - Join strings using ‘+’ - `message + ‘ and a new message’`
-- Change string case - `message.toLowerCase();message.toUpperCase();` 
+- Change string case - `message.toLowerCase();message.toUpperCase();`
 
 ### Loops
 Loops are a way to repeat some piece of code based on a condition. Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly based on a condition.
@@ -260,7 +261,7 @@ function getData(id, name) {
 getData(1, 'rish');
 ```
 
-We can pass a default value for a parameter which is used in case a parameter is not given during the call. 
+We can pass a default value for a parameter which is used in case a parameter is not given during the call.
 
 A function can have a return value which can be assigned to a variable.
 
@@ -275,7 +276,7 @@ var newAge = doubleAge(); // age will be 36
 
 
 ### Objects
-Any value that’s not of a primitive type is an object in js. So, an array or a string both are objects of type array and string respectively. 
+Any value that’s not of a primitive type is an object in js. So, an array or a string both are objects of type array and string respectively.
 
 Objects in JavaScript can be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
 
@@ -299,7 +300,7 @@ const person = {
 
 // Get or reset a value:
 
-person.name ;  // object style 	
+person.name ;  // object style
 person['name'];  // array style notation
 
 person.name = 'Rish Pandey';
@@ -318,15 +319,15 @@ If you pass an object to a function it is always passed by reference.
 
 
 ### Scope
-Scope is the set of variable which are visible or available to a part of program. 
+Scope is the set of variable which are visible or available to a part of program.
 
 There are three scopes available in js:
 
-- global scope 
-If a variable is declared outside a function or a block it’s attached to the global scope and is available to every part of the code. 
+- global scope
+If a variable is declared outside a function or a block it’s attached to the global scope and is available to every part of the code.
 Global variables can be altered by any part of the code, making it difficult to remember or reason about every possible use. A global variable can have no access control. It can not be limited to some part of the program.
 
-- block scope 
+- block scope
 A block is a set of instructions grouped into a pair of curly braces, like the ones we can find inside an if statement, a for loop, or a function. These variables are only available within the current block. Using ‘var’ does not work with block scope and assigns the variable to a function scope, that’s why it is recommended to use const or let.
 
 - function scope
@@ -354,12 +355,12 @@ function do(param){
 
 
 ### Errors
-Errors and exceptions usually occur when something doesn’t go as planned.  There are three types of errors in programming: 
+Errors and exceptions usually occur when something doesn’t go as planned.  There are three types of errors in programming:
 
 - Syntax Errors
 These are errors that occur during compiling or interpreting. If a piece or code is not written correctly then it is not possible for the javascript engine to make sense of it.
 
-For example, `let b = ;`  this will lead to 
+For example, `let b = ;`  this will lead to
 `Uncaught SyntaxError: Unexpected token ';'` which means that the there was a syntax error in the code and the semicolon was found where something else (like a number, string, object etc.) was expected.
 
 These types of errors are easiest to debug as the engine tells us exactly what is wrong and where.
@@ -398,10 +399,10 @@ Creating nodes
 
 ```
 // Create a <button> element
-var btn = document.createElement("BUTTON");   
+var btn = document.createElement("BUTTON");
 
 // Insert HTML between <button> and </button>
-btn.innerHTML = "CLICK ME";     
+btn.innerHTML = "CLICK ME";
 
 // Append <button> to <body>
 document.body.appendChild(btn);
@@ -416,8 +417,8 @@ document.getElementById('div-1').appendChild(btn);
 ```
 
 Element content
-- element.innerHTML - This property is used to modify HTML content of an element. You can also insert or nest another element inside an element using this. 
-- element.innerText - This changes the text content of an element. 
+- element.innerHTML - This property is used to modify HTML content of an element. You can also insert or nest another element inside an element using this.
+- element.innerText - This changes the text content of an element.
 
 Element Styling
 - element.style - used to modify the element CSS using js. This is used very commonly and supports all the properties of CSS.
@@ -466,7 +467,7 @@ el.addEventListener('click', clickHandlerFunction);
 ```
 
 - element.removeEventListener()
-An event listener added by calling addEventListener() can be removed by using element.removeEventListener. 
+An event listener added by calling addEventListener() can be removed by using element.removeEventListener.
 
 ```
 element.removeEventListener("click", clickHandlerFunction);
@@ -505,7 +506,7 @@ Allows to save key/value pairs in a web browser. Stores the data with no expirat
 // localStorage.setItem(key, value);
 localStorage.setItem('id', 10002);
 
-const id = localStorage.getItem('id'); 
+const id = localStorage.getItem('id');
 // id is 10002
 
 ```

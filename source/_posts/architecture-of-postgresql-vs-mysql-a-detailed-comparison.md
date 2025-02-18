@@ -2,8 +2,9 @@
 extends: _layouts.post
 section: content
 title: "Architecture of PostgreSQL vs MySQL: A Detailed Comparison"
-date: 2024-10-12
-featured: false
+date: 2024-11-10
+featured: true
+keywords: 'postgres, mysql, postgres vs mysql, database, database architecture'
 categories: [database]
 ---
 
@@ -35,10 +36,10 @@ Key Components of PostgreSQL Architecture:
 	•	PostgreSQL supports extensions that add custom features or functionalities, such as PostGIS for spatial data and pg_trgm for fuzzy string matching.
 	6.	Replication
 	•	PostgreSQL supports streaming replication and logical replication, allowing for high availability and scaling. In streaming replication, one node (master) replicates data to one or more standby nodes.
-	
-	
-	
-	
+
+
+
+
 2. MySQL Architecture
 
 MySQL is a relational database management system optimized for speed and simplicity. It is used in many web applications, especially for high-volume transactional environments. MySQL’s architecture is designed for high availability, scalability, and fault tolerance.
@@ -58,9 +59,9 @@ Key Components of MySQL Architecture:
 	•	InnoDB is the default storage engine and supports row-level locking, foreign keys, and transactions.
 	4.	Replication
 	•	MySQL uses master-slave replication and master-master replication (multi-master) for scaling and high availability. It allows the database to be replicated to multiple servers, improving read scalability and fault tolerance.
-	
-	
-	
+
+
+
 ```
 
 | Component               | PostgreSQL                              | MySQL                                      |
@@ -74,7 +75,7 @@ Key Components of MySQL Architecture:
 
 ```
 
-	
+
 Conclusion
 
 Both PostgreSQL and MySQL follow a client-server architecture, but their internal components and how they handle query execution, transactions, and data storage differ significantly.

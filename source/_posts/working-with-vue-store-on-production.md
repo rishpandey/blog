@@ -5,6 +5,7 @@ title: "Vue Tip #1: Getting vuex store instance on production in Vue3"
 date: 2024-01-16
 featured: false
 categories: [vue]
+keywords: vue, vuex, state management, vue3, debugging
 ---
 
 Copy and paste the code below in the developer console and you will get the instace of Vuex on any website using vuex. And yes it works on production.

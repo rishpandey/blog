@@ -2,9 +2,10 @@
 extends: _layouts.post
 section: content
 title: "Getting Started with Web Development: Intro to CSS"
-excerpt: A crash course of CSS, the source of every beautiful thing you see on the web. 
+excerpt: A crash course of CSS, the source of every beautiful thing you see on the web.
 date: 2021-03-25
 categories: [basics]
+keywords: css, web development, css crash course, css tutorial, css basics
 ---
 
 CSS or Cascading Style Sheets is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.
@@ -58,7 +59,7 @@ Every HTML tag has a corresponding selector, for example: div, span, img. If a s
 
 As we learned in the HTML, there are two attributes which are commonly used to target elements. The class and id attributes, and the class can be repeated while the same id is only used for a single element.
 
-- Classes are identified using the . symbol, while ids using the # symbol. 
+- Classes are identified using the . symbol, while ids using the # symbol.
 
 The whole point of keeping multiple elements with the same class name is that we are able to style all these elements by targeting the class.
 
@@ -138,7 +139,7 @@ h3, .action {
 
 ```
 
-- We can create a more specific selector by combining multiple items to follow the document tree structure. 
+- We can create a more specific selector by combining multiple items to follow the document tree structure.
 
 ```
 
@@ -161,11 +162,11 @@ div p span.name {
 The above selector will also work if the nested element is deeper in the structure. To get just the first level deep span we can use ‘>’  instead of space (‘ ’).
 
 - We have more selectors we can use like,
-	* attribute selectors - 
+	* attribute selectors -
 	These are used to select an element by its attribute. For example, a		paragraph with id message can be selected by **p[id=“message”]**.
 
-	* pseudo class selectors 
-	Pseudo classes are predefined keywords that are used to select an 		element based on its state, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		button:disabled. 
+	* pseudo class selectors
+	Pseudo classes are predefined keywords that are used to select an 		element based on its state, or to target a specific child. There are 		many pseudo-classes like active, checked, disabled, hover, last-child 		etc. For example, a disabled can be selected by using a colon (:) like 		button:disabled.
 
 	* pseudo element selectors
 	Pseudo elements are used to style a part of an element, there are five 		supported pseudo elements,
@@ -185,7 +186,7 @@ We can add any color to our elements using three properties,
 - background-color  - sets the color of the background.
 - border-color - set a color for the element’s border
 
-To select a color we have 
+To select a color we have
 - named color - a huge list of colors by name like red, blue, aqua, plum etc.
 - RGB and RGBa - RGB notation allow us to set color based on red-green-blue from 0 to 255. RGBa allows us to add an alpha unit (0 to 1) which controls the transparency.
 - Color Hex - The hexadecimal notation lets us express a number from 0 to 255 in just 2 digits, since they can go from 0 to “15” (f). So a RGB color can be expressed with 6 digits like rob(255,255,255) is FFFFFF.
@@ -203,7 +204,7 @@ p{
 
 p span{
 	color: rgba(255, 255, 255, 0.8);
-	border-color: #ccc; // grey and same as #cccccc 
+	border-color: #ccc; // grey and same as #cccccc
 }
 
 ```
@@ -226,7 +227,7 @@ There are also physical units like cm, mm, q (quarter of mm), in (inch) etc. The
 
 **URL**
 
-We can use @import to add another css file in the current one. 
+We can use @import to add another css file in the current one.
 
 `@import url(anotherfile.css)`
 
@@ -242,7 +243,7 @@ div {
 
 **CALC**
 
-The calc() function lets us perform basic math operations on values. Let’s say we need to have a div which is 20px less than 50% of the parent’s width. 
+The calc() function lets us perform basic math operations on values. Let’s say we need to have a div which is 20px less than 50% of the parent’s width.
 
 ```
 div {
@@ -258,7 +259,7 @@ We can do addition, subtraction, multiplication and division in calc.
 There are many properties related to backgrounds, mostly we will need:
 * background-color - sets a background color
 * background-image - sets a background image with url()
-* background-clip - defines how far the background (color or image) should extend within an element. 
+* background-clip - defines how far the background (color or image) should extend within an element.
 * background-position - sets a position of background within the element
 * background-origin - sets the background’s origin from the border start, inside the border, or inside the padding.
 * background-repeat - sets if a background should repeat and how
@@ -283,7 +284,7 @@ Just like background the font property is a shorthand for a number of properties
 ```
 font: <font-stretch> <font-style> <font-variant> <font-weight> <font-size> <line-height> <font-family>;
 ```
- 
+
 **How to load a custom font?**
 @font-face lets you add a new font family name, and map it to a file that holds a font. This file is usually one of the following type
 - woff (Web Open Font Format)
@@ -299,7 +300,7 @@ To add a new font we can do something like,
 
 @font-face {
   font-family: myFontName;
-  src: url(sansation_light.woff); 
+  src: url(sansation_light.woff);
 }
 
 p {
@@ -337,10 +338,10 @@ Starting from inside to outside we have: content area, padding, border and margi
 
 By default, when we set a width (or height) on the element it is applied to the content area. All the padding, border, and margin are done outside of the value, so we have to keep this in mind when you do your calculation.
 
-MARGIN 
+MARGIN
 The margin CSS property is used to add space around the element. The margin exists outside the border and touches the box model edges.
 
-Margin has 4 properties, each relative to one side of the element box. Margin can be used as a shorthand for these. 
+Margin has 4 properties, each relative to one side of the element box. Margin can be used as a shorthand for these.
 
 * margin-top
 * margin-right
@@ -371,16 +372,16 @@ div{
 
 // the order is top-right-bottom-left
 div{
-	margin: 10px 5px 10px 5px; 
+	margin: 10px 5px 10px 5px;
 }
 
 
 ```
 
 PADDING
-The padding CSS property is used to add space in the inner side of an element. The padding exists between the content area and border. 
+The padding CSS property is used to add space in the inner side of an element. The padding exists between the content area and border.
 
-Padding has 4 properties, each relative to one side of the element box. Padding can be used as a shorthand for these. 
+Padding has 4 properties, each relative to one side of the element box. Padding can be used as a shorthand for these.
 
 * padding-top
 * padding-right
@@ -411,7 +412,7 @@ div{
 
 // the order is top-right-bottom-left
 div{
-	padding: 10px 5px 10px 5px; 
+	padding: 10px 5px 10px 5px;
 }
 
 
@@ -434,16 +435,16 @@ The border is a thin layer between padding and margin. By setting the border, we
 The border property is used as a shorthand for all of these.
 border: <border-width> <border-color> <border-style>;
 
-- border-radius - sets the curve on the border edges, can be used to create rounded corners. 
+- border-radius - sets the curve on the border edges, can be used to create rounded corners.
 
 
 BOX SIZING
 
-The default behavior of applying the width and height to content area without taking padding, border or margin into account can be changed. 
+The default behavior of applying the width and height to content area without taking padding, border or margin into account can be changed.
 
 The box-sizing property has 2 values:
 * border-box - setting this will make width and height calculation include the padding and the border.
-* content-box - default 
+* content-box - default
 ```
 div {
   box-sizing: border-box;
@@ -482,7 +483,7 @@ Block
 Block displayed items are stacked one after other vertical and takes 100% of the parent. So, it starts on a new line, and takes up the whole width. The values assigned to the width and height properties are applied, if you set them, along with margin and padding.
 
 None
-Using display: none makes an element disappear. The item will not show up on the Html document. We can use this to hide status messages and alerts and switch the property when it’s relevant for them to be visible. 
+Using display: none makes an element disappear. The item will not show up on the Html document. We can use this to hide status messages and alerts and switch the property when it’s relevant for them to be visible.
 
 
 ### Positioning
@@ -505,7 +506,7 @@ An element with position: fixed; is positioned relative to the viewport, and it 
 * sticky
 This is positioned based on the user’s scroll position. A sticky element toggles between relative and fixed, depending on the scroll position. Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
 
-We can set top, left, bottom and right using any unit and it also supports negative values. 
+We can set top, left, bottom and right using any unit and it also supports negative values.
 
 ### Float
 
@@ -516,11 +517,11 @@ The float property can have one of the following values:
 * right - The element floats to the right of its container
 * none - This is default, element does not float.
 
-There is a clear property which specifies on which sides of an element floating elements are not allowed to float. 
+There is a clear property which specifies on which sides of an element floating elements are not allowed to float.
 
 If an element can fit horizontally in the space next to another element which is floated, it will. Unless you apply clear to that element in the same direction as the float. Then the element will move down below the floated element. You can think of clear like it clears any unwanted float that may get applied to it because of empty space in floated sibling elements.
 
-clear: both | left | right ; 
+clear: both | left | right ;
 
 ```
 
@@ -536,7 +537,7 @@ img{
 }
 
 p#p2{
-	clear: both; 
+	clear: both;
 }
 ```
 
@@ -574,7 +575,7 @@ We can also target multiple devices. For instance, this @mediarule uses two medi
 `@media screen, print { … }`
 
 
-Many media features are range features prefixed with “min-“ or “max-“ to express “minimum condition” or “maximum condition” constraints. 
+Many media features are range features prefixed with “min-“ or “max-“ to express “minimum condition” or “maximum condition” constraints.
 
 For example, to apply CSS to devices with max viewport width of 1200px we can use
 

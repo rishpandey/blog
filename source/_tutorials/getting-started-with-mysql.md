@@ -1,9 +1,10 @@
 ---
 extends: _layouts.post
 section: content
-title: "Getting Started with Web Development: Intro to MySql" 
+title: "Getting Started with Web Development: Intro to MySql"
 date: 2021-04-05
 categories: [basics]
+keywords: web development, mysql, database, sql, php, pdo, laravel, database design, normalization, transactions
 ---
 
 MySQL is a database management software. A database is a structured collection of data, organized in ways to make common operations like searching and retrieving data, very efficient.
@@ -14,10 +15,10 @@ SQL Keywords:
 - Database - A container of relevant MySQL data and tables.
 - Table - A container for actual data. A table is a collection of rows and columns. Tables are also known as entities or relations.
 - Rows - A row or record contains data for a single item or record in a table.
-- Columns - A column or field contains data for a specific characteristic of the records in the table. 
+- Columns - A column or field contains data for a specific characteristic of the records in the table.
 - Relationships - A link between two tables.
-- Datatypes - A column can only contain values of the same datatype example: int, varchar, text etc. 
-- Keys 
+- Datatypes - A column can only contain values of the same datatype example: int, varchar, text etc.
+- Keys
 	- Primary Keys - This is a unique identifier (a column) for a table used for efficient searching.
 	- Foreign Keys - This is a link to another table’s primary key, used to establish a relationship between tables.
 
@@ -45,7 +46,7 @@ MySQL has a very sophisticated access control system.  There is a ‘root’ use
 
 > FLUSH PRIVILEGES;
 
-``` 
+```
 
 
 List of privileges
@@ -74,11 +75,11 @@ A table is a single entity like a user or blog_post and can have all data relate
 
 ```
 
-> CREATE TABLE users ( 
+> CREATE TABLE users (
 	id int auto_increment,
-	name VARCHAR(128), 
-	title VARCHAR(128), 
-	type VARCHAR(16), 
+	name VARCHAR(128),
+	title VARCHAR(128),
+	type VARCHAR(16),
 	birth_year CHAR(4),
 	primary key(id)
 ) ENGINE MyISAM;
@@ -92,11 +93,11 @@ A table is a single entity like a user or blog_post and can have all data relate
 
 Each column has the following info,
 - Field - name of each field or column
-- Type - datatype being stored in the field. 
-- Null - Whether the field is allowed to contain a value of NULL. 
-- Key - shows what type of key (if any) has been applied. 
+- Type - datatype being stored in the field.
+- Null - Whether the field is allowed to contain a value of NULL.
+- Key - shows what type of key (if any) has been applied.
 - Default - default value that will be assigned if no value is specified .
-- Extra Additional information like `auto_increment` or `CURRENT_TIMESTAMP`. 
+- Extra Additional information like `auto_increment` or `CURRENT_TIMESTAMP`.
 
 
 **Data types**
@@ -111,10 +112,10 @@ Numeric Types:
 - BIT - A bit field
 
 String Types:
-- CHAR - A fixed-length nonbinary (character) string, 
+- CHAR - A fixed-length nonbinary (character) string,
 - VARCHAR - A variable-length non-binary string
 - BINARY - A fixed-length binary string
-- BLOB - A small BLOB  
+- BLOB - A small BLOB
 - TEXT - A small non-binary string
 - ENUM - An enumeration; each column value may be assigned one enumeration member
 - SET - A set; each column value may be assigned zero or more SET members
@@ -177,7 +178,7 @@ DROP user_info;
 ```
 
 // get all data
-SELECT * FROM user_info; 
+SELECT * FROM user_info;
 
 // get specific column
 SELECT birth_year from user_info;
@@ -207,13 +208,13 @@ This is used to filter other queries like select and delete.
 
 ```
 
-// We can do arithmetic (>, <, >=, <=, =, !=) 
+// We can do arithmetic (>, <, >=, <=, =, !=)
 SELECT * FROM user_info WHERE id > 1;
 
 // LIKE is used for string matching
 SELECT * FROM user_info WHERE name LIKE 'RISH';
 
-// LIKE with % is used to match substring, 
+// LIKE with % is used to match substring,
 // % is here substituted for, ends with any string
 SELECT * FROM user_info WHERE name LIKE 'RISH%';
 
@@ -270,7 +271,7 @@ We can also use limit, order by and group by with update as well.
 
 
 **Joins**
-SQL is a RDBMS or Relational Database Management System. All data is stored using tables and relations between these tables. 
+SQL is a RDBMS or Relational Database Management System. All data is stored using tables and relations between these tables.
 
 Let’s create another table,
 
@@ -312,19 +313,19 @@ SELECT user_info.name, payments.total_price from user_info JOIN payments ON user
 
 ### Normalization and Basics of Good DB Design
 
-Normalization is the process of separating data into tables to make the database more efficient and avoid duplication. 
+Normalization is the process of separating data into tables to make the database more efficient and avoid duplication.
 
 There are many normal forms in database design, we will learn about the first three as they are most important and apply everywhere.
 
 - 1NF
-	1. There should be no repeating columns containing the same kind of data. 
-	2. All columns should contain a single value, multivalve column are inefficient. 
+	1. There should be no repeating columns containing the same kind of data.
+	2. All columns should contain a single value, multivalve column are inefficient.
 	3. There should be a primary key to uniquely identify each row.
 
 This largely deals with removing duplication and redundancy in multiple columns.
 
 ```
-Given: 
+Given:
 
 ID   Name   Courses
 ------------------
@@ -347,11 +348,11 @@ ID   Name   Course
 
 - 2NF
 	1. Must be in 1NF.
-	2. The table should have no partial dependencies. 
+	2. The table should have no partial dependencies.
 
 Partial Dependency occur when non prime attribute depends on the subset/part of candidates key (more than one primary key).
 
-A candidate key is a column, or set of columns, in a table that can uniquely identify any database record without referring to any other data. 
+A candidate key is a column, or set of columns, in a table that can uniquely identify any database record without referring to any other data.
 Each table may have one or more candidate keys, but one candidate key is unique, and it is called the primary key.
 
 
@@ -364,7 +365,7 @@ For this table we have,
 Candidate Key: Id, Product
 Non prime attribute : Price
 
-Price attribute only depends on only Product attribute which is a subset of candidate key, not the whole candidate key(Id, Product) key. 
+Price attribute only depends on only Product attribute which is a subset of candidate key, not the whole candidate key(Id, Product) key.
 It is called partial dependency.
 
 So we can say that Product->Price is partial dependency.
@@ -376,7 +377,7 @@ Creating another table with Product and Price will normalize this table in 2NF.
 
 Data that is not dependent on primary key but that is dependent on another column should be moved to separate table.
 
-Example: 
+Example:
 We have another table
 Students (id, name, state, country, age)
 
@@ -484,7 +485,7 @@ $query = 'SELECT * FROM user_info';
 // Perform query to get count
 if ($result = $connection->query($query)){
 	echo "Returned rows are: " . $result -> num_rows;
-  
+
 	// Free result set
   $result->free_result();
 }
@@ -514,7 +515,7 @@ VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($connection->query($sql) === TRUE) {
 	$last_id = $connection->insert_id;
-  echo "New record created successfully with id:$last_id";	
+  echo "New record created successfully with id:$last_id";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -526,7 +527,7 @@ if ($connection->query($sql) === TRUE) {
 We can do update and delete similarly.
 
 
-### Using PDO 
+### Using PDO
 
 PDO stands for PHP data objects. PDO is the recommended way of working with databases now, as it works with 12 different databases including MySQL.
 
@@ -547,7 +548,7 @@ PDO stands for PHP data objects. PDO is the recommended way of working with data
   $connection = new PDO($dsn, $user, $password);
 
   // Set PDO::FETCH_OBJ as fetch() default attributes
-	// To return records as objects when fetch is called 
+	// To return records as objects when fetch is called
   $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 ```
 
@@ -570,7 +571,7 @@ PDO stands for PHP data objects. PDO is the recommended way of working with data
 	}
 
 ```
-  
+
 - Prepared Statements
 Prepared statements can help increase security by separating SQL logic from the data being supplied. This separation of logic and data can help prevent a very common type of vulnerability called an SQL injection attack.
 
@@ -595,11 +596,11 @@ Prepared statements can help increase security by separating SQL logic from the 
 	$stmt = $connection->prepare($sql);
 	$stmt->execute(['title' => $title]);
 	$users = $stmt->fetchAll();
-	
+
 	// row count
 	$userCount = $stmt->rowCount();
 
-	// print 
+	// print
   foreach ($users as $users) {
     echo $users->title . '<br>';
   }

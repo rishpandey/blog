@@ -5,6 +5,7 @@ title: "Let's build a Virtual DOM in JS from scratch"
 date: 2024-09-15
 featured: true
 categories: [vue, js]
+keywords: virtual dom, vue, js, frontend, dom manipulation
 ---
 
 A while ago, I wanted to really understand how modern UI libraries like Vue manage efficient rendering. So, I decided to challenge myself by **creating my own Virtual DOM library**. In this article, we will see how to do build our own Virtual DOM and use it to create a basic Todo list app.
@@ -33,7 +34,7 @@ Why do we need to define Virtual Nodes (VNodes)?
 
 Manipulating the actual DOM directly for every little change is a recipe for poor performance. The DOM is slow, and updating it frequently can make the UI laggy, which is not what we want.
 
-We need a way to represent the UI components in a lightweight, efficient manner before committing any changes to the real DOM. That's where Virtual Nodes, or VNodes, come into play. 
+We need a way to represent the UI components in a lightweight, efficient manner before committing any changes to the real DOM. That's where Virtual Nodes, or VNodes, come into play.
 
 By defining VNodes, we're essentially creating plain JavaScript objects that mirror the structure of actual DOM elements. These VNodes contain information about the element type, its properties (like attributes and event listeners), and its children.
 
@@ -426,4 +427,4 @@ There are several ways to improve this library:
 ---
 
 
-Building this Virtual DOM library and using it in a real project was a fantastic learning experience. It gave me deeper insights into how libraries like React manage efficient updates and state management. 
+Building this Virtual DOM library and using it in a real project was a fantastic learning experience. It gave me deeper insights into how libraries like React manage efficient updates and state management.

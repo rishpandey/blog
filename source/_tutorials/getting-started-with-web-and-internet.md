@@ -2,9 +2,10 @@
 extends: _layouts.post
 section: content
 title: "Getting Started with Web Development: Intro to Web and Internet"
-excerpt: Q/A about how the internet works. 
+excerpt: Q/A about how the internet works.
 date: 2021-03-15
 categories: [basics]
+keywords: web development, internet, how internet works, web development basics
 ---
 
 
@@ -20,10 +21,10 @@ Data sent across the Internet is called a *message*. Before a *message* is sent,
 **What’s a packet routing network?**<br>
 It is a network that routes *packets* from a source computer to a destination computer. The Internet is made up of a massive network of specialized computers called *routers*. Each *router’s* job is to know how to move *packets* along from their source to their destination. A *packet* will have moved through multiple *routers* during its journey.
 
-When a *packet* moves from one *router* to the next, it’s called a *hop*. 
+When a *packet* moves from one *router* to the next, it’s called a *hop*.
 You can use the command line-tool traceroute to see the list of hops packets take between you and a host.
 
-> traceroute -I 8.8.8.8  
+> traceroute -I 8.8.8.8
 
 The *Internet Protocol* specifies how network *addresses*should be attached to the *packet’s* *headers,*a designated space in the *packet* containing its meta-data. The *Internet Protocol* also specifies how the *routers* should forward the *packets* based on the *address* in the *header*.
 
@@ -46,13 +47,13 @@ The first address standard is called *IPv4* and it looks like 212.78.1.25 . But 
 As such, there is a one-to-one mapping between *IPv4* and *IPv6* addresses. Note the switch from *IPv4* to *IPv6* is still in progress and will take a long time. As of 2014, Google revealed their *IPv6* traffic was only at 3%.
 
 **How can there be over 8 billion networked devices on the Internet if there are only about 4 billion IPv4 addresses?**<br>
-It’s because there are *public* and *private IP addresses.* Multiple devices on a local network connected to the Internet will share the same *public IP address*. Within the local network, these devices are differentiated from each other by *private IP addresses*, typically of the form 192.168.xx or 172.16.x.x or 10.x.x.x where x is a number between 1 and 255. These *private IP addresses* are assigned by * .* [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) 
+It’s because there are *public* and *private IP addresses.* Multiple devices on a local network connected to the Internet will share the same *public IP address*. Within the local network, these devices are differentiated from each other by *private IP addresses*, typically of the form 192.168.xx or 172.16.x.x or 10.x.x.x where x is a number between 1 and 255. These *private IP addresses* are assigned by * .* [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
 For example, if a laptop and a smart phone on the same local network both make a request to www.google.com, before the *packets* leave the modem, it modifies the *packet headers* and assigns one of its ports to that *packet*. When the google server responds to the requests, it sends data back to the modem at this specific port, so the modem will know whether to route the *packets* to the laptop or the smart phone.
 In this sense,*IP addresses* aren’t specific to a computer, but more the connection which the computer connects to the Internet with. The address that is unique to your computer is the  [MAC address](https://en.wikipedia.org/wiki/MAC_address) , which never changes throughout the life of the computer.
 This protocol of mapping *private IP addresses* to *public* *IP* *addresses* is called the *Network Address Translation*(NAT) protocol. It’s what makes it possible to support 8+ billion networked devices with only 4 billion possible *IPv4* addresses.
 
 **How does the router know where to send a packet? Does it need to know where all the IP addresses are on the Internet?**<br>
-Every *router* does not need to know where every *IP address* is. It only needs to know which one of its neighbors, called an *outbound link,*to route each packet to. Note that *IP Addresses* can be broken down into two parts, a *network prefix* and a *host identifier*. 
+Every *router* does not need to know where every *IP address* is. It only needs to know which one of its neighbors, called an *outbound link,*to route each packet to. Note that *IP Addresses* can be broken down into two parts, a *network prefix* and a *host identifier*.
 
 For example, 129.42.13.69 can be broken down into
 Network Prefix: 129.42

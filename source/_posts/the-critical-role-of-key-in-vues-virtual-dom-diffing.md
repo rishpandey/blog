@@ -6,6 +6,7 @@ cover_image: https://images.unsplash.com/photo-1550527882-b71dea5f8089?q=80&w=35
 date: 2024-07-10
 featured: true
 categories: [vue]
+keywords: vue, virtual dom, vue key, vue diffing, vue reactivity
 ---
 Directly modifying props in a Vue component might seem like a quick solution, but it goes against Vue's fundamental design principles and leads to unintended consequences. Let’s dive into the mechanics of Vue’s reactivity and unidirectional data flow to see why mutating props is problematic and what it actually does to your component’s behavior.
 
@@ -52,7 +53,7 @@ Let’s say the parent later updates `count` to a different value. Here’s what
 
 - The parent updates `count` and passes the new value down.
 
-- Since the child mutated `initialCount` locally, this new value might get ignored or cause Vue to re-render the component unexpectedly. 
+- Since the child mutated `initialCount` locally, this new value might get ignored or cause Vue to re-render the component unexpectedly.
 
 - You’re left with a mismatch between the value displayed in the child component and the value in the parent’s state.
 

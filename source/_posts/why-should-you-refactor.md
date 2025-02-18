@@ -8,6 +8,7 @@ keywords: 'refactoring, technical debt, clean code'
 cover_image: https://images.unsplash.com/photo-1528659882437-b89a74bc157f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80
 featured: false
 categories: [coding, clean-code]
+keywords: refactoring, technical debt, clean code
 ---
 
 You have been working on this feature for a long time. When the client pitched this great new addition, you felt this would take a week. And here you are working on a Saturday and nothing feels right. You start to question everything about your career choices, the impostor syndrome kicks in.

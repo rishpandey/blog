@@ -2,16 +2,17 @@
 extends: _layouts.post
 section: content
 title: "Getting Started with Web Development: Intro to HTML"
-excerpt: A crash course of everyone's favorite web markup language. 
+excerpt: A crash course of everyone's favorite web markup language.
 date: 2021-03-20
 categories: [basics]
+keywords: html, web development, web design, html tags, html elements
 ---
 
 HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating web pages and web applications. Every page you see on the web has some sort of HTML associated with it. Even the most minimal browser in the worlds needs to understand or parse HTML/CSS and Javascript to be able to show webpages.
 
 By convention, an HTML file is saved with a .html or .htm extension.
 
-Inside this file, we organise the content using tags. Tags wrap the content, and each tag gives a special meaning to the text it wraps. 
+Inside this file, we organise the content using tags. Tags wrap the content, and each tag gives a special meaning to the text it wraps.
 
 
 
@@ -72,7 +73,7 @@ A paragraph of text         </p>
 
 All three paragraphs are same here. There is a property in CSS to change this behaviour, more on that later.
 
-Nested tags should be indented with 2 or 4 characters. This makes the document more readable. Readability is a very important metric of a good codebase. 
+Nested tags should be indented with 2 or 4 characters. This makes the document more readable. Readability is a very important metric of a good codebase.
 
 ### Document Head
 
@@ -90,7 +91,7 @@ This is the first tag nested into the html i.e. the first tag after opening the 
 	</head>
 </html>
 ```
- 
+
 The head tag is not used to show content on the webpage but to define the document properties. These properties are themselves stored in different tags so the head is just a container for other tags.
 
 Most used tags in the head are following:
@@ -111,7 +112,7 @@ There are two types of elements in body: block and inline.
 
 Block elements, when positioned in the page, do not allow other elements next to them. To the left, or to the right. Inline elements instead can sit next to other inline elements.
 Another difference is that inline elements can be contained in block elements. The reverse is not true.
- 
+
 Let’s see most common tags we’ll use in a HTML document body.
 
 **Text Based**
@@ -121,7 +122,7 @@ Let’s see most common tags we’ll use in a HTML document body.
 - br - an inline element which defines a line break. It doesn’t have a closing tag.
 - hr - an inline element which defines a line break. It doesn’t have a closing tag.
 - h1, h2, h3, h4, h5, h6 - These are heading tags in HTML, from biggest to smallest. These are also block elements and you can’t nest another element inside a heading.
-- strong - This tag marks the text inside it as strong. 
+- strong - This tag marks the text inside it as strong.
 
 There are many other text tags like em, quotes, pre etc. They are less used but you can check them out in the HTML documentation.
 
@@ -130,11 +131,11 @@ There are many other text tags like em, quotes, pre etc. They are less used but 
 
 There are three types of lists in HTML.
 
-* unordered lists 
+* unordered lists
 * ordered lists
-* definition lists 
+* definition lists
 
-Unordered and ordered lists are widely used, definition lists are not. 
+Unordered and ordered lists are widely used, definition lists are not.
 
 ```
 <ul>
@@ -169,7 +170,7 @@ List item 1
 List item 3
 				List item 4
 
-``` 
+```
 
 
 ```
@@ -208,7 +209,7 @@ You can nest link tags with images and blocks rather than just texts. To open th
 
 **Container Tags**
 
-These are most powerful tags in HTML as they can contain any set of tags inside them. 
+These are most powerful tags in HTML as they can contain any set of tags inside them.
 
 * article
 * section
@@ -221,13 +222,13 @@ section
 This represents a section of a document. Each section should have a heading tag (h1-h6) and the section body. This is used to break a long article or content into different parts.
 
 div
-This is the generic container element. It fits all shapes and forms to accommodate all your container needs. It almost always comes with a class or id attribute to this element, to allow it to be styled using CSS. 
+This is the generic container element. It fits all shapes and forms to accommodate all your container needs. It almost always comes with a class or id attribute to this element, to allow it to be styled using CSS.
 
 **Page Tags**
 
 These are the tags that are related to the whole page’s content.
 
-- nav 
+- nav
 - header
 - main
 - footer
@@ -240,21 +241,21 @@ header
 The header tag represents a part of the page that is the introduction. It can for example contain one or more heading tag (h1-h6), the tagline for the article, an image.
 
 main
-This represents the main part of a page. 
+This represents the main part of a page.
 
 footer
 The footer tag is used to determine the footer of an article or the page:
 
 
-HTML is a very forgiving language. To use these tags correctly is entirely upto the user’s judgement. You can have page with nothing but div tags or a page with every tag supported by HTML. 
-The right way to write HTML is using specific tags for specific purposes, leave styling to CSS and keeping the tags consistent throughout the site. 
+HTML is a very forgiving language. To use these tags correctly is entirely upto the user’s judgement. You can have page with nothing but div tags or a page with every tag supported by HTML.
+The right way to write HTML is using specific tags for specific purposes, leave styling to CSS and keeping the tags consistent throughout the site.
 
 
 ### Forms
 Forms are meant to interact with an application. A form is used to send some data or information from the client (browser) to the server. By default this data sending causes the page to reload after the data is sent, but using JavaScript and AJAX you can alter this behavior.
 
 **Method Attribute**
-By default forms are submitted using the GET HTTP method. Which has its drawbacks, and usually you want to use POST. To specific which method to use we do 
+By default forms are submitted using the GET HTTP method. Which has its drawbacks, and usually you want to use POST. To specific which method to use we do
 
 `method=“POST”`
 
@@ -279,7 +280,7 @@ Most commonly we use the following fields.
 
 
 **Input Tag**
-The input field is one of the most widely used form elements. It’s also a very versatile element, and it can completely change behavior based on the “type” attribute. 
+The input field is one of the most widely used form elements. It’s also a very versatile element, and it can completely change behavior based on the “type” attribute.
 
 There are many types like,
 
@@ -304,18 +305,18 @@ There are many types like,
 `<input type=“hidden” name=“user-id” value=“88273”>`
 
 
-- file 
+- file
 A file input used to upload documents on the server.
 
 `<input type=“file” name=“user-identification-document”>`
 
 
-- submit 
+- submit
 A button field used to submit the form, value attribute is used for the button.
 
 `<input type=“submit” value=“Submit form”>`
 
-- button 
+- button
 Another button field to perform any action other than submitting the form.
 
 `<input type=“button” value=“Some action”>`
