@@ -12,7 +12,7 @@ description: A detailed comparison of the architecture of PostgreSQL and MySQL, 
 Both PostgreSQL and MySQL follow a client-server architecture where the database server handles all database operations, and clients interact with the database through queries. While both databases follow similar fundamental structures, they have different internal architectures and implementations for handling requests, transactions, replication, and extensibility. Below is a breakdown of their architectures.
 
 
-1. PostgreSQL Architecture
+### PostgreSQL Architecture
 
 PostgreSQL is an object-relational database system with an emphasis on extensibility, SQL compliance, and support for advanced data types. Its architecture is designed to handle complex data structures and high concurrency efficiently.
 
@@ -45,7 +45,7 @@ Key Components of PostgreSQL Architecture:
   - PostgreSQL supports streaming replication and logical replication, allowing for high availability and scaling. In streaming replication, one node (master) replicates data to one or more standby nodes.
 
 
-2. MySQL Architecture
+### MySQL Architecture
 
 MySQL is a relational database management system optimized for speed and simplicity. It is used in many web applications, especially for high-volume transactional environments. MySQL’s architecture is designed for high availability, scalability, and fault tolerance.
 
@@ -85,7 +85,7 @@ Key Components of MySQL Architecture:
 
 
 
-Conclusion
+#### Conclusion
 
 Both PostgreSQL and MySQL follow a client-server architecture, but their internal components and how they handle query execution, transactions, and data storage differ significantly.
 - PostgreSQL is built for handling complex queries, large-scale enterprise applications, and high concurrency, with advanced features like MVCC, user-defined types, and extensions.
